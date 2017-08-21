@@ -57,7 +57,7 @@ Note: Use of `\(`, `\[` syntax disallows escaping `(` and `[` for other purposes
 
 **MacDown**
 
-* **Hang.** If MacDown Preference `Update preview automatically as you type` is enabled, then editing the [md_evaluation.md](md_evaluation.md) document may cause MacDown to hang. Likely related to html render, not markdown highlighting.  Maybe related to time to render a significant about remotely loaded MathJax JavaScript.
+* **Hang.** If MacDown Preference `Update preview automatically as you type` is enabled, then editing the [md_evaluation.md](md_evaluation.md) document may cause MacDown to hang. Likely related to html render, not markdown highlighting.  Maybe related to time to render a document which requires a significant amount of JavaScript to run including the remotely loaded MathJax libraries. [see issue 807 ⇗](https://github.com/MacDownApp/macdown/issues/807). Workaround: disable `Update preview automatically as you type`.
 
 Resources <a id="Resources">[▴](#toc)</a>
 ---------
