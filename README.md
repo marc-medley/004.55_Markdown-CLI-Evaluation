@@ -6,8 +6,6 @@
 
 _A comparative evalution of open source CLI Markdown processors: discount `markdown`, `hoedown`, `multimarkdown` and `pandoc`._
 
-:TODO: put bug report notes in `man markdown`, `man hoedown`, `man pandoc` pages.
-
 Objectives <a id="Objectives">[▴](#toc)</a>
 ----------
 
