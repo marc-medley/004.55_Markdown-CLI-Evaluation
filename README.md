@@ -6,6 +6,8 @@
 
 _A comparative evalution of open source CLI Markdown processors: discount `markdown`, `hoedown`, `multimarkdown` and `pandoc`._
 
+_:TODO: add `cmark-gfm`. add `SwiftMark`._
+
 Objectives <a id="Objectives">[▴](#toc)</a>
 ----------
 
@@ -21,6 +23,10 @@ Process <a id="Process">[▴](#toc)</a>
 3. Run [`test.sh`](md_evaluation_files/)
 4. Compare output. The `a` and `b` versions allow comparison what output changed for some settings change for the same CLI tool. The `txt` and `html` allows for comparison of raw output and how the output renders in a browser.
 
+>_Note: Discount `markdown` and MultiMarkdown `markdown` have the same command name. Thus, Discount `markdown` and MultiMarkdown `markdown` are mutually exclusive `brew` installs. However, Discount `markdown` can be manually installed somewhere not on `$PATH` and scripted with `/FULL/PATH/TO/markdown`._
+    
+> _Note: brew `cmark` and `cmark-gfm` conflict because both install a `cmark.h` header._
+
 Observations <a id="Observations">[▴](#toc)</a>
 ------------
 
@@ -32,6 +38,7 @@ _LaTeX demarkation syntax_
 
 |                     | `$`, `$$` | `\\(`, `\\[` | `\(`, `\[` |
 |---------------------|:---------:|:------------:|:------------:|
+| raw html            |           |              | ✓            |
 | discount `markdown` |           |              | ✓            |
 | `hoedown`           | ✓         | ✓            |              |
 | `multimarkdown`     | ✓         | ✓            |              |
@@ -41,7 +48,7 @@ Note: Use of `\(`, `\[` syntax disallows escaping `(` and `[` for other purposes
 
 **discount `markdown`** 
 
-* **html fenced code.**  discount `markdown` fenced html with ` ~~~html` does not generate a useable code block.  Angle brackets are not converted to html entities.  The enclosing `<pre><code>` tags are not produced.  Workaround Options: (1) fence the html as xml with `~~~xml` or (2) write an html codeblock as raw html in the markdown file.
+* **html fenced code.**  discount `markdown` fenced html with `~~~ html` does not generate a useable code block.  Angle brackets are not converted to html entities.  The enclosing `<pre><code>` tags are not produced.  Workaround Options: (1) fence the html with `~~~ markup` or (2) write an html codeblock as raw html in the markdown file.
 
 **`hoedown`** 
 
@@ -67,7 +74,10 @@ Resources <a id="Resources">[▴](#toc)</a>
 [GitHub/fletcher: MultiMarkdown-6](https://github.com/fletcher/MultiMarkdown-6)    
 [GitHub: pandoc ⇗](https://github.com/jgm/pandoc) _Implementation: `Haskell`_  
 [MultiMarkdown `markdown`](http://fletcherpenney.net/multimarkdown/) _Implementation: `C`_  
-[Pandoc User’s Guide ⇗](http://pandoc.org/MANUAL.html)   
+[Pandoc User’s Guide ⇗](http://pandoc.org/MANUAL.html)  
+
+[Github/github: cmark ⇗](https://github.com/github/cmark) _aka `cmark-cfm`_  
+[CommonMark: home ⇗](http://commonmark.org)   
 
   
 

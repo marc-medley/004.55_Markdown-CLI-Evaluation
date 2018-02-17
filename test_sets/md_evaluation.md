@@ -2,7 +2,7 @@
 ====================
 [title]:http://daringfireball.net/projects/markdown/syntax
 
-_See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages_
+_See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdown-CLI-Evaluation_
 
 [see ⇊](down.md)
 
@@ -182,7 +182,7 @@ a = b + c;
 for (int i=0; i<n; n++) {}
 ```
 
-~~~ xml
+~~~ markup
 <dict>
     <key>Message</key>
     <string>Greetings.</string>
@@ -191,7 +191,7 @@ for (int i=0; i<n; n++) {}
 </dict>
 ~~~
 
-~~~ html
+~~~ markup
 <p>Example html paragraph</p>
 ~~~
 
