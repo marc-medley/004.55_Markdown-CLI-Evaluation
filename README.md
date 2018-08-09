@@ -1,5 +1,4 @@
-004.55 Markdown CLI Evaluation
-=======
+# 004.55 Markdown CLI Evaluation
 
 <a id="toc"></a>
 | [Objectives](#Objectives) | [Process](#Process) | [Observations](#Observations) | [Resources](#Resources) |  
@@ -48,7 +47,7 @@ Note: Use of `\(`, `\[` syntax disallows escaping `(` and `[` for other purposes
 
 **discount `markdown`** 
 
-* **html fenced code.**  discount `markdown` fenced html with `~~~ html` does not generate a useable code block.  Angle brackets are not converted to html entities.  The enclosing `<pre><code>` tags are not produced.  Workaround Options: (1) fence the html with `~~~ markup` or (2) write an html codeblock as raw html in the markdown file.
+* **html fenced code.**  discount `markdown` fenced html with **&Tilde;&Tilde;&Tilde; html** does not generate a useable code block.  Angle brackets are not converted to html entities.  The enclosing `<pre><code>` tags are not produced.  Workaround Options: (1) fence the html with **&Tilde;&Tilde;&Tilde; markup** or (2) write an html codeblock as raw html in the markdown file.
 
 **`hoedown`** 
 

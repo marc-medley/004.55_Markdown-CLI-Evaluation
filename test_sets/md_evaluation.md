@@ -1,5 +1,4 @@
-[H1 md_evaluation][title]  [⇈](up.md)
-====================
+# [H1 md_evaluation][title]  [⇈](up.md)
 [title]:http://daringfireball.net/projects/markdown/syntax
 
 _See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdown-CLI-Evaluation_
@@ -39,8 +38,7 @@ Note: Discount, Hoedown, MacDown & Pandoc can all work with `<a id="name">[▴](
 
 #### H4: USE THIS APPROACH. `<a id="idAfter">[▴](#toc)</a> `<a id="idAfter">[▴](#toc)</a>
 
-Blank Line Before Header
-----
+## Blank Line Before Header
 
 | parser   | directive             | comment                                                    |
 | -------- | --------------------- |:---------------------------------------------------------- |
@@ -90,8 +88,7 @@ Header Trailing `#`
 ### Some Header with `###` on both sides. ###
 
 
-Horizontal Rule
----------------
+## Horizontal Rule
 
 ____
 
@@ -101,8 +98,7 @@ Horizontal Rule: at least three asterisks, underscores, or hyphens. Put empty li
 
 *****
 
-Inline Formatting
------------------
+## Inline Formatting
 
 Italics emphasis brackets with *single asterisks* (cmd-i) or _single underscores_. Strong bold emphasis brackets with **double asterisks** (cmd-b) or __double underscores__. Mixed emphasis can be **can be _nested_**. ~~Strikethrough~~ is bracketed with two tildes.
 
@@ -137,8 +133,7 @@ If intra_letter_emphasis is not enabled, then `_` and `*` are are unmodified in 
 |Underline           | `<u>`      | <u>So doge</u>       |
 
 
-Block Quotes
-------------
+## Block Quotes
 
 > Blockquotes use `>` similar to email reply text.  
 >> Nested line in the same quote. Pandoc & MacDown show next line break.  
@@ -182,18 +177,18 @@ a = b + c;
 for (int i=0; i<n; n++) {}
 ```
 
-~~~ markup
+``` markup
 <dict>
     <key>Message</key>
     <string>Greetings.</string>
     <key>Type</key>
     <integer>0</integer>
 </dict>
-~~~
+```
 
-~~~ markup
+``` markup
 <p>Example html paragraph</p>
-~~~
+```
 
 **`markdown`**: `<pre><code class="c">` (discount). Note: `markdown` deliniate `html` the code fences. To show `html`, use `<pre><code class="language-html">` with escaped angle brackets `&gt;` `&lt;` for the enclosed example code. 
 **`hoedown`**: `<pre><code class="language-c">`  
@@ -674,8 +669,7 @@ Given:<br>
 
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-`div` heading  
-=============  
+# `div` heading    
 
 </div>
 
