@@ -1,6 +1,6 @@
 <h1><a href="http://daringfireball.net/projects/markdown/syntax">H1 md_evaluation</a> <a href="up.md">⇈</a></h1>
 
-<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages</em></p>
+<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdown-CLI-Evaluation</em></p>
 
 <p><a href="down.md">see ⇊</a></p>
 
@@ -39,39 +39,39 @@
 
 <table>
 <colgroup>
-<col/>
-<col/>
+<col />
+<col />
 <col style="text-align:left;"/>
 </colgroup>
 
 <thead>
 <tr>
-	<th>parser</th>
-	<th>directive</th>
-	<th style="text-align:left;">comment</th>
+	<th> parser </th>
+	<th> directive    </th>
+	<th style="text-align:left;"> comment             </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td>discount</td>
-	<td></td>
-	<td style="text-align:left;"></td>
+	<td> discount </td>
+	<td>      </td>
+	<td style="text-align:left;"> </td>
 </tr>
 <tr>
-	<td>hoedown</td>
-	<td></td>
-	<td style="text-align:left;">not required</td>
+	<td> hoedown </td>
+	<td>      </td>
+	<td style="text-align:left;"> not required           </td>
 </tr>
 <tr>
-	<td>macdown</td>
-	<td></td>
-	<td style="text-align:left;">not required</td>
+	<td> macdown </td>
+	<td>      </td>
+	<td style="text-align:left;"> not required           </td>
 </tr>
 <tr>
-	<td>pandoc</td>
-	<td><code>blank_before_header</code></td>
-	<td style="text-align:left;">Pandoc Markdown extension requires blank before header.</td>
+	<td> pandoc </td>
+	<td> <code>blank_before_header</code> </td>
+	<td style="text-align:left;"> Pandoc Markdown extension requires blank before header. </td>
 </tr>
 </tbody>
 </table>
@@ -97,39 +97,39 @@
 
 <table>
 <colgroup>
-<col/>
+<col />
 <col style="text-align:center;"/>
 <col style="text-align:left;"/>
 </colgroup>
 
 <thead>
 <tr>
-	<th>parser</th>
-	<th style="text-align:center;">directive</th>
-	<th style="text-align:left;">comment</th>
+	<th> parser </th>
+	<th style="text-align:center;"> directive   </th>
+	<th style="text-align:left;"> comment </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td>discount</td>
-	<td style="text-align:center;">-</td>
-	<td style="text-align:left;">not supported</td>
+	<td> discount </td>
+	<td style="text-align:center;"> -     </td>
+	<td style="text-align:left;"> not supported </td>
 </tr>
 <tr>
-	<td>hoedown</td>
-	<td style="text-align:center;">-</td>
-	<td style="text-align:left;">not supported</td>
+	<td> hoedown </td>
+	<td style="text-align:center;"> -     </td>
+	<td style="text-align:left;"> not supported </td>
 </tr>
 <tr>
-	<td>macdown</td>
-	<td style="text-align:center;">-</td>
-	<td style="text-align:left;">not supported</td>
+	<td> macdown </td>
+	<td style="text-align:center;"> -     </td>
+	<td style="text-align:left;"> not supported </td>
 </tr>
 <tr>
-	<td>pandoc</td>
-	<td style="text-align:center;"><code>header_attributes</code></td>
-	<td style="text-align:left;">Pandoc Markdown extension …</td>
+	<td> pandoc </td>
+	<td style="text-align:center;"> <code>header_attributes</code> </td>
+	<td style="text-align:left;"> Pandoc Markdown extension … </td>
 </tr>
 </tbody>
 </table>
@@ -158,158 +158,146 @@
 
 <h2>Inline Formatting</h2>
 
-<p>Italics emphasis brackets with <em>single asterisks</em> (cmd-i) or <em>single underscores</em>. Strong bold emphasis brackets with <strong>double asterisks</strong> (cmd-b) or <strong>double underscores</strong>. Mixed emphasis can be <strong>can be <em>nested</em></strong>. ~~Strikethrough~~ is bracketed with two tildes.</p>
+<p>Italics emphasis brackets with <em>single asterisks</em> (cmd-i) or <em>single underscores</em>. Strong bold emphasis brackets with <strong>double asterisks</strong> (cmd-b) or <strong>double underscores</strong>. Mixed emphasis can be <strong>can be <em>nested</em></strong>. <sub><sub>Strikethrough</sub></sub> is bracketed with two tildes.</p>
 
 <p>If intra_letter_emphasis is not enabled, then <code>_</code> and <code>*</code> are are unmodified in a name or equation a=b*c.</p>
 
 <table>
 <colgroup>
-<col/>
+<col />
 <col style="text-align:center;"/>
-<col/>
+<col />
 </colgroup>
 
 <thead>
 <tr>
-	<th>Option name (enabled)</th>
-	<th style="text-align:center;">Syntax</th>
-	<th>Result if enabled</th>
+	<th>Option name (enabled) </th>
+	<th style="text-align:center;"> Syntax  </th>
+	<th> Result if enabled         </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td>Emphasis, Italic</td>
-	<td style="text-align:center;"><code>_</code></td>
-	<td>So <em>Amazing</em></td>
+	<td>Emphasis, Italic  </td>
+	<td style="text-align:center;"> <code>_</code>   </td>
+	<td> So <em>Amazing</em> </td>
 </tr>
 <tr>
-	<td>Emphasis, Italic</td>
-	<td style="text-align:center;"><code>*</code></td>
-	<td>So <em>Amazing</em></td>
+	<td>Emphasis, Italic  </td>
+	<td style="text-align:center;"> <code>*</code>   </td>
+	<td> So <em>Amazing</em> </td>
 </tr>
 <tr>
-	<td>Emphasis, Strong</td>
-	<td style="text-align:center;"><code>__</code></td>
-	<td>So <strong>Amazing</strong></td>
+	<td>Emphasis, Strong  </td>
+	<td style="text-align:center;"> <code>__</code>   </td>
+	<td> So <strong>Amazing</strong> </td>
 </tr>
 <tr>
-	<td>Emphasis, Strong</td>
-	<td style="text-align:center;"><code>**</code></td>
-	<td>So <strong>Amazing</strong></td>
+	<td>Emphasis, Strong  </td>
+	<td style="text-align:center;"> <code>**</code>   </td>
+	<td> So <strong>Amazing</strong> </td>
 </tr>
 <tr>
-	<td>Emphasis, IntraWord</td>
-	<td style="text-align:center;"><code>A*maz*ing</code></td>
-	<td>A<em>maz</em>ing (complicates equations. Discount, Pandoc: always enabled)</td>
+	<td>Emphasis, IntraWord </td>
+	<td style="text-align:center;"> <code>A*maz*ing</code> </td>
+	<td> A<em>maz</em>ing (complicates equations. Discount, Pandoc: always enabled) </td>
 </tr>
 <tr>
-	<td>Emphasis, IntraWord</td>
-	<td style="text-align:center;"><code>A_maz_ing</code></td>
-	<td>A_maz_ing (complicates some names. Hoedown, MacDown:does not separately control <code>_</code>, <code>*</code>)</td>
+	<td>Emphasis, IntraWord </td>
+	<td style="text-align:center;"> <code>A_maz_ing</code> </td>
+	<td> A_maz_ing (complicates some names. Hoedown, MacDown:does not separately control <code>_</code>, <code>*</code>) </td>
 </tr>
 <tr>
-	<td>Strikethrough</td>
-	<td style="text-align:center;"><code>~~</code></td>
-	<td>~~Much wow~~</td>
+	<td>Strikethrough   </td>
+	<td style="text-align:center;"> <code>~~</code>   </td>
+	<td> ~~Much wow~~ </td>
 </tr>
 </tbody>
-</table>
-
-<table>
-<colgroup>
-<col/>
-<col style="text-align:center;"/>
-<col/>
-</colgroup>
-
-<thead>
-<tr>
-	<th>Option name (disabled)</th>
-	<th style="text-align:center;">Syntax</th>
-	<th>Result if enabled</th>
-</tr>
-</thead>
 
 <tbody>
 <tr>
-	<td>Highlight</td>
-	<td style="text-align:center;"><code>==</code></td>
-	<td>==So good== (Hoedown, MacDown)</td>
+	<td>Option name (disabled) </td>
+	<td style="text-align:center;"> Syntax  </td>
+	<td> Result if enabled         </td>
 </tr>
 <tr>
-	<td>Quote</td>
-	<td style="text-align:center;"><code>&quot;</code></td>
-	<td>&quot;If enabled, <code>&quot;</code> becomes <code>&lt;q&gt;</code>. (Hoedown, MacDown: not smarty pants compatible)&quot;</td>
+	<td>-----------------------</td>
+	<td style="text-align:center;">:-------------:</td>
+	<td>-----------------------------------------------------</td>
 </tr>
 <tr>
-	<td>Subscript</td>
-	<td style="text-align:center;"><code>H~2~0</code></td>
-	<td>H<sub>2</sub>0 is water (Pandoc)</td>
+	<td>Highlight    </td>
+	<td style="text-align:center;"> <code>==</code>   </td>
+	<td> ==So good== (Hoedown, MacDown) </td>
 </tr>
 <tr>
-	<td>Superscript</td>
-	<td style="text-align:center;"><code>2^3^</code></td>
-	<td>2<sup>3</sup> is 8 (Pandoc)</td>
+	<td>Quote     </td>
+	<td style="text-align:center;"> <code>&quot;</code>   </td>
+	<td> &quot;If enabled, <code>&quot;</code> becomes <code>&lt;q&gt;</code>. (Hoedown, MacDown: not smarty pants compatible)&quot;</td>
 </tr>
 <tr>
-	<td>Superscript</td>
-	<td style="text-align:center;"><code>hoge^(fuga)</code></td>
-	<td>hoge^(fuga) (Discount , Hoedown, MacDown)</td>
+	<td>Subscript    </td>
+	<td style="text-align:center;"> <code>H~2~0</code>  </td>
+	<td> H<sub>2</sub>0 is water (Pandoc) </td>
 </tr>
 <tr>
-	<td>Underline</td>
-	<td style="text-align:center;"><code>_</code></td>
-	<td><em>If enabled, underline overrides `</em>` Italic Emphasis_</td>
+	<td>Superscript   </td>
+	<td style="text-align:center;"> <code>2^3^</code>  </td>
+	<td> 2<sup>3</sup> is 8 (Pandoc) </td>
+</tr>
+<tr>
+	<td>Superscript   </td>
+	<td style="text-align:center;"> <code>hoge^(fuga)</code> </td>
+	<td> hoge^(fuga) (Discount , Hoedown, MacDown) </td>
+</tr>
+<tr>
+	<td>Underline    </td>
+	<td style="text-align:center;"> <code>_</code>   </td>
+	<td> <em>If enabled, underline overrides <code>_</code> Italic Emphasis</em> </td>
 </tr>
 </tbody>
-</table>
-
-<table>
-<colgroup>
-<col/>
-<col style="text-align:center;"/>
-<col/>
-</colgroup>
-
-<thead>
-<tr>
-	<th>Option name</th>
-	<th style="text-align:center;">&lt;html&gt;</th>
-	<th>Result if enabled</th>
-</tr>
-</thead>
 
 <tbody>
 <tr>
-	<td><em>Emphasis</em></td>
-	<td style="text-align:center;"><code>&lt;em&gt;</code></td>
-	<td>A<em>maz</em>ing</td>
+	<td>Option name   </td>
+	<td style="text-align:center;">&lt;html&gt;</td>
+	<td> Result if enabled </td>
 </tr>
 <tr>
-	<td>Highlight</td>
-	<td style="text-align:center;"><code>&lt;mark&gt;</code></td>
-	<td><mark>So good</mark></td>
+	<td>--------------------</td>
+	<td style="text-align:center;">:----------:</td>
+	<td>------------------------</td>
 </tr>
 <tr>
-	<td>Quote</td>
-	<td style="text-align:center;"><code>&lt;q&gt;</code></td>
-	<td><q>Such editor</q></td>
+	<td><em>Emphasis</em> </td>
+	<td style="text-align:center;"> <code>&lt;em&gt;</code>  </td>
+	<td> A<em>maz</em>ing </td>
 </tr>
 <tr>
-	<td>Strikethrough</td>
-	<td style="text-align:center;"><code>&lt;del&gt;</code></td>
-	<td><del>Much wow</del></td>
+	<td>Highlight   </td>
+	<td style="text-align:center;"> <code>&lt;mark&gt;</code> </td>
+	<td> <mark>So good</mark> </td>
 </tr>
 <tr>
-	<td>Superscript</td>
-	<td style="text-align:center;"><code>&lt;sup&gt;</code></td>
-	<td>hoge<sup>fuga</sup></td>
+	<td>Quote    </td>
+	<td style="text-align:center;"> <code>&lt;q&gt;</code>  </td>
+	<td> <q>Such editor</q> </td>
 </tr>
 <tr>
-	<td>Underline</td>
-	<td style="text-align:center;"><code>&lt;u&gt;</code></td>
-	<td><u>So doge</u></td>
+	<td>Strikethrough  </td>
+	<td style="text-align:center;"> <code>&lt;del&gt;</code> </td>
+	<td> <del>Much wow</del> </td>
+</tr>
+<tr>
+	<td>Superscript   </td>
+	<td style="text-align:center;"> <code>&lt;sup&gt;</code> </td>
+	<td> hoge<sup>fuga</sup> </td>
+</tr>
+<tr>
+	<td>Underline   </td>
+	<td style="text-align:center;"> <code>&lt;u&gt;</code>  </td>
+	<td> <u>So doge</u>  </td>
 </tr>
 </tbody>
 </table>
@@ -317,11 +305,13 @@
 <h2>Block Quotes</h2>
 
 <blockquote>
-<p>Blockquotes use <code>&gt;</code> similar to email reply text. </p>
+<p>Blockquotes use <code>&gt;</code> similar to email reply text.</p>
 
 <blockquote>
-<p>Nested line in the same quote. Pandoc &amp; MacDown show next line break. </p>
+<p>Nested line in the same quote. Pandoc &amp; MacDown show next line break.</p>
+</blockquote>
 
+<blockquote>
 <ul>
 <li>Lists</li>
 <li><a href="http://www.macupdate.com">Some link</a></li>
@@ -345,7 +335,7 @@ alert(s);
 No language indicated. No syntax highlighting.
 </code></pre>
 
-<p>If <code>inline code with `backticks`</code> use double backticks:<br/>
+<p>If <code>inline code with `backticks`</code> use double backticks:<br />
 <code>``inline code with `backticks` ``</code> (spaces must preceed the final set of backticks)</p>
 
 <pre><code class="bash"># bash
@@ -358,22 +348,20 @@ a = b + c;
 for (int i=0; i&lt;n; n++) {}
 </code></pre>
 
-<p>~~~ xml
-<dict>
- <key>Message</key>
- <string>Greetings.</string>
- <key>Type</key>
- <integer>0</integer>
-</dict>
-~~~</p>
+<pre><code class="markup">&lt;dict&gt;
+    &lt;key&gt;Message&lt;/key&gt;
+    &lt;string&gt;Greetings.&lt;/string&gt;
+    &lt;key&gt;Type&lt;/key&gt;
+    &lt;integer&gt;0&lt;/integer&gt;
+&lt;/dict&gt;
+</code></pre>
 
-<p>~~~ html
-<p>Example html paragraph</p>
-~~~</p>
+<pre><code class="markup">&lt;p&gt;Example html paragraph&lt;/p&gt;
+</code></pre>
 
 <p><strong><code>markdown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;</code> (discount). Note: <code>markdown</code> deliniate <code>html</code> the code fences. To show <code>html</code>, use <code>&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;</code> with escaped angle brackets <code>&amp;gt;</code> <code>&amp;lt;</code> for the enclosed example code.
-<strong><code>hoedown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;</code><br/>
-<strong><code>pandoc</code></strong>: <code>&lt;pre class=&quot;c&quot;&gt;&lt;code&gt;</code> _using <code>--no-highlight</code> option with <code>fenced_code_attributes</code> flag enabled_</p>
+<strong><code>hoedown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;</code><br />
+<strong><code>pandoc</code></strong>: <code>&lt;pre class=&quot;c&quot;&gt;&lt;code&gt;</code> <em>using <code>--no-highlight</code> option with <code>fenced_code_attributes</code> flag enabled</em></p>
 
 <p>Languages: actionscript apacheconf applescript bash (sh) c coffeescript cpp (c++) css fortran git go groovy handlebars html http ini java javascript (js) json latex less markdown matlab objectivec (objc) pascal perl php python ruby sql swift xml</p>
 
@@ -391,7 +379,7 @@ for (int i=0; i&lt;n; n++) {}
 <pre><code class="swift">123456789*123456789*123456789*123456789*123456789*123456789*1234
 </code></pre>
 
-<p>Landscape 85 </p>
+<p>Landscape 85</p>
 
 <pre><code class="swift">123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*12345
 </code></pre>
@@ -401,7 +389,7 @@ for (int i=0; i&lt;n; n++) {}
 <p><strong>Example ordered list</strong></p>
 
 <ol>
-<li><p>First ordered list item</p></li>
+<li>First ordered list item</li>
 <li>Another item
 
 <ul>
@@ -416,21 +404,21 @@ for (int i=0; i&lt;n; n++) {}
 <li>Sub-sub-list</li>
 </ol></li>
 </ol></li>
-<li><p>And another item.</p>
+<li>And another item.
 
-<p>Properly (4-space) indented paragraph. Blank line above. At least one leading space. </p>
+Properly (4-space) indented paragraph. Blank line above. At least one leading space.
 
-<p>Two trailing spaces creates a linebreak. ..<br/>
-Note that this line is separate, but within the same paragraph.</p></li>
+Two trailing spaces creates a linebreak. ..<br />
+Note that this line is separate, but within the same paragraph.</li>
 </ol>
 
 <p><strong>Example alpha list</strong> - Discount only.</p>
 
-<p>A. First ordered list item<br/>
-B. Another item<br/>
-C. Actual numbers don't matter, just that it's a number </p>
+<p>A. First ordered list item<br />
+B. Another item<br />
+C. Actual numbers don't matter, just that it's a number</p>
 
-<p><strong>Example unordered list:</strong> </p>
+<p><strong>Example unordered list:</strong></p>
 
 <ul>
 <li>Unordered list can use asterisks</li>
@@ -440,7 +428,7 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <h2>Tables <em>(extension)</em> <a id="Tables"><a href="#toc">▴</a></a></h2>
 
-<p>Pandoc: <code>table_captions</code>, <code>simple_tables</code>, <code>multiline_tables</code>, <code>grid_tables</code>, <code>pipe_tables</code> </p>
+<p>Pandoc: <code>table_captions</code>, <code>simple_tables</code>, <code>multiline_tables</code>, <code>grid_tables</code>, <code>pipe_tables</code></p>
 
 <p>NOTE: Pandoc <code>pipe_tables</code> uses <code>----</code> separator length for both relative column widths and overall table width.</p>
 
@@ -448,34 +436,34 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <table>
 <colgroup>
-<col/>
+<col />
 <col style="text-align:center;"/>
 <col style="text-align:right;"/>
 </colgroup>
 
 <thead>
 <tr>
-	<th>Tables</th>
-	<th style="text-align:center;">Are</th>
-	<th style="text-align:right;">Cool</th>
+	<th> Tables  </th>
+	<th style="text-align:center;"> Are   </th>
+	<th style="text-align:right;"> Cool </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td>zebra stripes</td>
-	<td style="text-align:center;">alternate</td>
-	<td style="text-align:right;">120</td>
+	<td> zebra stripes </td>
+	<td style="text-align:center;"> alternate  </td>
+	<td style="text-align:right;"> 120 </td>
 </tr>
 <tr>
-	<td>column 2</td>
-	<td style="text-align:center;">centered</td>
-	<td style="text-align:right;">1230</td>
+	<td> column 2  </td>
+	<td style="text-align:center;"> centered  </td>
+	<td style="text-align:right;"> 1230 </td>
 </tr>
 <tr>
-	<td>column 3</td>
-	<td style="text-align:center;">✓</td>
-	<td style="text-align:right;">1</td>
+	<td> column 3  </td>
+	<td style="text-align:center;"> ✓    </td>
+	<td style="text-align:right;">  1 </td>
 </tr>
 </tbody>
 </table>
@@ -505,7 +493,7 @@ C. Actual numbers don't matter, just that it's a number </p>
   <td>Jackson</td>
   <td>94</td>
 </tr>
-</table>
+</table> 
 
 <p><strong>36</strong></p>
 
@@ -518,17 +506,17 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <thead>
 <tr>
-	<th style="text-align:left;">Table</th>
-	<th style="text-align:center;">Size</th>
-	<th style="text-align:right;">Test</th>
+	<th style="text-align:left;"> Table  </th>
+	<th style="text-align:center;"> Size  </th>
+	<th style="text-align:right;"> Test  </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;">10+2</td>
-	<td style="text-align:center;">10+2</td>
-	<td style="text-align:right;">10+2</td>
+	<td style="text-align:left;"> 10+2  </td>
+	<td style="text-align:center;"> 10+2  </td>
+	<td style="text-align:right;"> 10+2  </td>
 </tr>
 </tbody>
 </table>
@@ -544,17 +532,17 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <thead>
 <tr>
-	<th style="text-align:left;">Table</th>
-	<th style="text-align:center;">Size</th>
-	<th style="text-align:right;">Test</th>
+	<th style="text-align:left;"> Table    </th>
+	<th style="text-align:center;"> Size     </th>
+	<th style="text-align:right;"> Test     </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;">20+2</td>
-	<td style="text-align:center;">20+2</td>
-	<td style="text-align:right;">20+2</td>
+	<td style="text-align:left;"> 20+2     </td>
+	<td style="text-align:center;"> 20+2     </td>
+	<td style="text-align:right;"> 20+2     </td>
 </tr>
 </tbody>
 </table>
@@ -570,17 +558,17 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <thead>
 <tr>
-	<th style="text-align:left;">Table</th>
-	<th style="text-align:center;">Size</th>
-	<th style="text-align:right;">Test</th>
+	<th style="text-align:left;"> Table       </th>
+	<th style="text-align:center;"> Size       </th>
+	<th style="text-align:right;"> Test       </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;">30+2 . . . . . . . . . . . . .</td>
-	<td style="text-align:center;">30+2 . . . . . . . . . . . . .</td>
-	<td style="text-align:right;">30+2 . . . . . . . . . . . . .</td>
+	<td style="text-align:left;"> 30+2 . . . . . . . . . . . . . </td>
+	<td style="text-align:center;"> 30+2 . . . . . . . . . . . . . </td>
+	<td style="text-align:right;"> 30+2 . . . . . . . . . . . . . </td>
 </tr>
 </tbody>
 </table>
@@ -596,17 +584,17 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <thead>
 <tr>
-	<th style="text-align:left;">Table</th>
-	<th style="text-align:center;">Size</th>
-	<th style="text-align:right;">Test</th>
+	<th style="text-align:left;"> Table         </th>
+	<th style="text-align:center;"> Size          </th>
+	<th style="text-align:right;"> Test          </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;">40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG.</td>
-	<td style="text-align:center;">40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG.</td>
-	<td style="text-align:right;">20+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG.</td>
+	<td style="text-align:left;"> 40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG. </td>
+	<td style="text-align:center;"> 40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG. </td>
+	<td style="text-align:right;"> 20+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG. </td>
 </tr>
 </tbody>
 </table>
@@ -615,24 +603,24 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <table>
 <colgroup>
-<col/>
+<col />
 <col style="text-align:center;"/>
 <col style="text-align:right;"/>
 </colgroup>
 
 <thead>
 <tr>
-	<th>Table</th>
-	<th style="text-align:center;">Size</th>
-	<th style="text-align:right;">Test</th>
+	<th> Table         </th>
+	<th style="text-align:center;"> Size      </th>
+	<th style="text-align:right;"> Test      </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td>40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG.</td>
-	<td style="text-align:center;">29 AAAA BBBB <code>CCCC</code> DDDD EEEE FFFF GGGG.</td>
-	<td style="text-align:right;">29 AAAA BBBB CCCC DDDD EEEE FFFF GGGG HHHH IIII JJJJ KKKK LLLL MMMM NNN OOOO PPPP.</td>
+	<td> 40+2 AAAA BBBB CCCC DDDD EEEE FFFF GGGG. </td>
+	<td style="text-align:center;"> 29 AAAA BBBB <code>CCCC</code> DDDD EEEE FFFF GGGG. </td>
+	<td style="text-align:right;"> 29 AAAA BBBB CCCC DDDD EEEE FFFF GGGG HHHH IIII JJJJ KKKK LLLL MMMM NNN OOOO PPPP. </td>
 </tr>
 </tbody>
 </table>
@@ -643,11 +631,11 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <p>Autolink: <code>http://t.co</code> becomes <code>&lt;http://t.co&gt;</code> displayed as <a href="http://t.co">http://t.co</a></p>
 
-<p>Footnotes<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>: inline <code>[^4]</code> &amp; <code>[^longnote]</code> references <code>[^4]: Some footnote text.</code> &amp; <code>[^ longnote]: Some longnote text.</code></p>
+<p>Footnotes<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote"><sup>1</sup></a>: inline <code>[^4]</code> &amp; <code>[^longnote]</code> references <code>[^4]: Some footnote text.</code> &amp; <code>[^ longnote]: Some longnote text.</code></p>
 
-<p>Here is an inline note.^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.] _Pandoc <code>inline_notes</code> only_</p>
+<p>Here is an inline note.^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.] <em>Pandoc <code>inline_notes</code> only</em></p>
 
-<p><a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x6f;&#109;&#x65;&#x6f;&#x6e;&#x65;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x6f;&#x6d;&#101;&#x6f;&#x6e;&#101;&#64;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#x6f;&#x6d;</a> (Discount, Hoedown, MacDown, Pandoc)</p>
+<p><a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#111;&#109;&#101;&#x6f;&#x6e;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#46;&#x63;&#111;&#x6d;">&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#111;&#109;&#101;&#x6f;&#x6e;&#x65;&#x40;&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> (Discount, Hoedown, MacDown, Pandoc)</p>
 
 <h6>inline link</h6>
 
@@ -658,7 +646,7 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <h6>reference link</h6>
 
-<p><a href="http://mozilla.org">see Note 1</a><br/>
+<p><a href="http://mozilla.org">see Note 1</a><br />
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover">see MDN:Hover</a></p>
 
 <pre><code class="markdown"> [see Note 1][Note1]  
@@ -678,7 +666,7 @@ C. Actual numbers don't matter, just that it's a number </p>
      &quot;Title With White Space Padding&quot;
 </code></pre>
 
-<p><a href="#anchor21">Link via id=&quot;&quot;</a><br/>
+<p><a href="#anchor21">Link via id=&quot;&quot;</a><br />
 <a href="#anchor22">Link via name=&quot;&quot;</a></p>
 
 <p><a id="anchor21"></a>Link to here via <code>id</code>. HTML5 creates a JavaScript global for each <code>id</code>. <code>name</code> is obsolete in HTML5, but may work and also not create globals. <code>id</code> must be unique in the whole document. <code>id</code> can contain <code>azAZ_-.</code></p>
@@ -700,13 +688,13 @@ C. Actual numbers don't matter, just that it's a number </p>
 
 <h2>Images <a id="Images"><a href="#toc">▴</a></a></h2>
 
-<p>Inline-style (HTTP)<br/>
+<p>Inline-style (HTTP)<br />
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1" /></p>
 
 <p><code>![alt text](https://github.com/…/images/icon48.png &quot;Title Text&quot;)</code></p>
 
-<p>Inline-style (relative)<br/>
-<a href="md_evaluation_files/figure1.png"><img src="md_evaluation_files/figure1.png" alt="alt text" title="Title 1" /></a><br/>
+<p>Inline-style (relative)<br />
+<a href="md_evaluation_files/figure1.png"><img src="md_evaluation_files/figure1.png" alt="alt text" title="Title 1" /></a><br />
 <code>![alt text](md_evaluation_files/figure1.png &quot;Title 1&quot;)</code></p>
 
 <p>(relative, clickable)</p>
@@ -715,32 +703,34 @@ C. Actual numbers don't matter, just that it's a number </p>
 (04.55_Markdown__QREF_files/figure1.png)
 </code></pre>
 
-<p>Reference-style (HTTP)<br/>
-<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" id="logo" title="Title 2" /> </p>
+<p>Reference-style (HTTP)<br />
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" id="logo" title="Title 2" /></p>
 
 <p><code>![alt text][logo]</code>
 <code>[logo]: https://github.com/…/images/icon48.png &quot;Title 2&quot;</code></p>
 
-<p>Reference-style (relative)<br/>
+<p>Reference-style (relative)<br />
 <img src="md_evaluation_files/figure2.png" alt="alt text" id="logo2" title="Title 2" /></p>
 
 <pre><code class="markdown"> ![alt text][logo2]
  [logo2]: md_evaluation_files/figure2.png &quot;Title 2&quot;
 </code></pre>
 
-<p>--
-Reference-style (relative, description=reference implicit)<br/>
+<hr />
+
+<p>Reference-style (relative, description=reference implicit)<br />
 <img src="md_evaluation_files/figure3.png" alt="logo3" id="logo3" title="Title 3" /></p>
 
 <pre><code class="markdown"> ![logo3]
  [logo3]: md_evaluation_files/figure3.png &quot;Title 3&quot;
 </code></pre>
 
-<p>HTML Style (Relative)<br/>
+<p>HTML Style (Relative)</p>
+
 <p><img src="md_evaluation_files/figure4.png"
          alt="logo4"
        title="Title 4"
-       width="256"></p></p>
+       width="256"></p>
 
 <pre><code class="language-html" >&lt;p&gt;&lt;img src="md_evaluation_files/figure4.png"
          alt="logo4"
@@ -764,8 +754,9 @@ Reference-style (relative, description=reference implicit)<br/>
   <dt>Definition list</dt>
   <dd>Is something people use sometimes.</dd>
 
-  <dt>Markdown in HTML</dt>
-  <dd>Does <em>*not*</em> work inside <strong>**html block tags**</strong>. Use HTML <em>tags</em>.</dd>
+<p><dt>Markdown in HTML</dt>
+<dd>Does <em><em>not</em></em> work inside <strong><strong>html block tags</strong></strong>. Use HTML <em>tags</em>.</dd></p>
+
 </dl>
 
 <pre><code>This is an html &lt;pre&gt;&lt;code&gt; block.
@@ -797,26 +788,26 @@ alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
 
 <p><strong><code>markdown</code> (discount)</strong> : <code>$$</code>, <code>\(</code>, <code>\[</code>. Note: a drawback of <code>\(</code>, <code>\[</code> extension is that it precludes escaping <code>(</code> and <code>[</code>. Note: <code>markdown</code> and <code>hoedown</code> are mutually exclusive.</p>
 
-<p><strong><code>hoedown</code></strong> : <em><code>--math</code></em> for **<code>\\(</code>**, **<code>\\[</code>**. <em><code>--math-explicit</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em>(Note: &quot;guessing by context&quot; may generate unexpected output if <code>--math</code> is enabled, and <code>--math-explicit</code> is not enabled. <code>--math-explicit</code> also disables &quot;guessing by context&quot;)</em></p>
+<p><strong><code>hoedown</code></strong> : <em><code>--math</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>--math-explicit</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em>(Note: &quot;guessing by context&quot; may generate unexpected output if <code>--math</code> is enabled, and <code>--math-explicit</code> is not enabled. <code>--math-explicit</code> also disables &quot;guessing by context&quot;)</em></p>
 
-<p><strong><code>pandoc</code></strong> : _<code>+tex_math_double_backslash</code>_ for **<code>\\(</code>**, **<code>\\[</code>**. _<code>+tex_math_dollars</code>_ for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. _<code>+tex_math_single_backslash</code>_ <strong><code>\(</code></strong>, <strong><code>\[</code></strong></p>
+<p><strong><code>pandoc</code></strong> : <em><code>+tex_math_double_backslash</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>+tex_math_dollars</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em><code>+tex_math_single_backslash</code></em> <strong><code>\(</code></strong>, <strong><code>\[</code></strong></p>
 
-<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Also, <code>&lt;br&gt;</code> is needed for line breaks.</em> </p>
+<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Markdown inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags are not parsed as markdown. Also, <code>&lt;br&gt;</code> is needed for line breaks.</em></p>
 
-<p><a href="http://atomurl.net/math/">TeX Equations</a> <em>(MacDown, Atom:markdown-preview-plus)</em> </p>
+<p><a href="http://atomurl.net/math/">TeX Equations</a> <em>(MacDown, Atom:markdown-preview-plus)</em></p>
 
-<p><code>\\(A^T_S = B\\)</code> : <span class="math">\(A^T_S = B\)</span><br/>
-<code>\\[A^T_S = B\\]</code> : <span class="math">\[A^T_S = B\]</span><br/>
-<code>\\(\sqrt{ab}\\)</code> * : <span class="math">\(\sqrt{ab}\)</span><br/>
-<code>\\[\sqrt{ab}\\]</code> * : <span class="math">\[\sqrt{ab}\]</span> </p>
+<p><code>\\(A^T_S = B\\)</code> : <span class="math">\(A^T_S = B\)</span><br />
+<code>\\[A^T_S = B\\]</code> : <span class="math">\[A^T_S = B\]</span><br />
+<code>\\(\sqrt{ab}\\)</code> * : <span class="math">\(\sqrt{ab}\)</span><br />
+<code>\\[\sqrt{ab}\\]</code> * : <span class="math">\[\sqrt{ab}\]</span></p>
 
-<p><code>$A^T_S = B$</code> : <span class="math">\(A^T_S = B\)</span><br/>
-<code>$$A^T_S = B$$</code> : <span class="math">\[A^T_S = B\]</span><br/>
-<code>$\sqrt{ab}$</code> : <span class="math">\(\sqrt{ab}\)</span><br/>
-<code>$$\sqrt{ab}$$</code> * : <span class="math">\[\sqrt{ab}\]</span> </p>
+<p><code>$A^T_S = B$</code> : <span class="math">\(A^T_S = B\)</span><br />
+<code>$$A^T_S = B$$</code> : <span class="math">\[A^T_S = B\]</span><br />
+<code>$\sqrt{ab}$</code> : <span class="math">\(\sqrt{ab}\)</span><br />
+<code>$$\sqrt{ab}$$</code> * : <span class="math">\[\sqrt{ab}\]</span></p>
 
-<p><code>\(\sqrt{ab}\)</code> : (\sqrt{ab})<br/>
-<code>\[\sqrt{ab}\]</code> : [\sqrt{ab}] </p>
+<p><code>\(\sqrt{ab}\)</code> : (\sqrt{ab})<br />
+<code>\[\sqrt{ab}\]</code> : [\sqrt{ab}]</p>
 
 <h4>The probability of getting <code>k</code> heads when flipping <code>n</code> coins is</h4>
 
@@ -833,44 +824,44 @@ alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
 <h4>Maxwell’s Equations</h4>
 
 <p><span class="math">\[  \begin{aligned}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}} & = 0 \end{aligned}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}
 \]</span></p>
 
 <p><em>Note: markdown-preview-plus prefers light syntax highlights</em></p>
 
 <h2>Entities <a id="Entities"><a href="#toc">▴</a></a></h2>
 
-<p>▴ <code>&amp;blacktriangle;</code> <code>&amp;utrif;</code> <em>… link to top table of contents</em><br/>
-⇗ <code>&amp;neArr;</code> North East Arrow <em>… link to offsite</em> </p>
+<p>▴ <code>&amp;blacktriangle;</code> <code>&amp;utrif;</code> <em>… link to top table of contents</em><br />
+⇗ <code>&amp;neArr;</code> North East Arrow <em>… link to offsite</em></p>
 
-<p>⇈ <code>&amp;uuarr;</code> <code>&amp;upuparrows;</code> <code>&amp;#x21C8;</code> <code>&amp;#8648;</code> <em>… link top a topic level</em><br/>
-⇊ <code>&amp;ddarr;</code> <code>&amp;downdownarrows;</code> <code>&amp;#x21CA;</code> <code>&amp;#8650;</code> <em>… link down a topic</em> </p>
+<p>⇈ <code>&amp;uuarr;</code> <code>&amp;upuparrows;</code> <code>&amp;#x21C8;</code> <code>&amp;#8648;</code> <em>… link top a topic level</em><br />
+⇊ <code>&amp;ddarr;</code> <code>&amp;downdownarrows;</code> <code>&amp;#x21CA;</code> <code>&amp;#8650;</code> <em>… link down a topic</em></p>
 
-<p>⇉ <code>&amp;rrarr;</code> <code>&amp;rightrightarrows;</code> <code>&amp;#x21C9;</code> <code>&amp;#8649;</code> <em>… link to previous page</em><br/>
-⇇ <code>&amp;llarr;</code> <code>&amp;leftleftarrows;</code> <code>&amp;#x21C7;</code> <code>&amp;#8647;</code> <em>… link to next page</em> </p>
+<p>⇉ <code>&amp;rrarr;</code> <code>&amp;rightrightarrows;</code> <code>&amp;#x21C9;</code> <code>&amp;#8649;</code> <em>… link to previous page</em><br />
+⇇ <code>&amp;llarr;</code> <code>&amp;leftleftarrows;</code> <code>&amp;#x21C7;</code> <code>&amp;#8647;</code> <em>… link to next page</em></p>
 
-<p>➤ <code>&amp;#x27A4;</code> <em>… play media</em><br/>
-&blacktriangleright; <code>&amp;blacktriangleright;</code> <code>&amp;rtrif;</code> <em>... play media</em> </p>
+<p>➤ <code>&amp;#x27A4;</code>	<em>… play media</em><br />
+&blacktriangleright; <code>&amp;blacktriangleright;</code> <code>&amp;rtrif;</code> <em>... play media</em></p>
 
-<p>⧫ <code>&amp;lozf;</code> <code>&amp;blacklozenge;</code> <code>&amp;#x29EB;</code> <code>&amp;#10731;</code><br/>
-◊ <code>&amp;loz;</code> <code>&amp;lozenge;</code> <code>&amp;#x25CA;</code> <code>&amp;#9674;</code> </p>
+<p>⧫ <code>&amp;lozf;</code> <code>&amp;blacklozenge;</code> <code>&amp;#x29EB;</code> <code>&amp;#10731;</code><br />
+◊ <code>&amp;loz;</code> <code>&amp;lozenge;</code> <code>&amp;#x25CA;</code> <code>&amp;#9674;</code></p>
 
 <p>&uparrow;</p>
 
-<p><strong>&nearr; &amp;nearr;</strong><br/>
-<strong>&blacktriangleleft; &amp;blacktriangleft; &amp;ltrif;</strong><br/>
+<p><strong>&nearr; &amp;nearr;</strong><br />
+<strong>&blacktriangleleft; &amp;blacktriangleft; &amp;ltrif;</strong><br />
 <strong>&blacktriangledown; &amp;blacktriangdown; &amp;dtrif;</strong> ▲
-<strong>&urtri; &amp;urtri;</strong><br/>
-<strong>&profline; &amp;profline;</strong><br/>
-<strong>&angle; &amp;angle;</strong><br/>
+<strong>&urtri; &amp;urtri;</strong><br />
+<strong>&profline; &amp;profline;</strong><br />
+<strong>&angle; &amp;angle;</strong><br />
 <strong>&frasl; &amp;frasl; fraction slash</strong>
-<strong>&andslope; &amp;andslope; fraction slash</strong> </p>
+<strong>&andslope; &amp;andslope; fraction slash</strong></p>
 
-<p>see: com.apple.CharacterPicker.plist<br/>
-see also: com.apple.CharacterPaletteM.plist<br/>
-see: <code>_PROCESS_/KeyBoard/!FavoriteChars.txt</code> </p>
+<p>see: com.apple.CharacterPicker.plist<br />
+see also: com.apple.CharacterPaletteM.plist<br />
+see: <code>_PROCESS_/KeyBoard/!FavoriteChars.txt</code></p>
 
 <h2>Fonts <a id="Fonts"><a href="#toc">▴</a></a></h2>
 
@@ -900,63 +891,62 @@ Given:
   \(r_B = 30\ \texttt{mm}\)
   </td>
 </tr>
-</table>
+</table> 
 
 <p><strong><code>Example: &lt;span&gt;</code> with font styles</strong></p>
 
-<p><span style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; 
-color: red; font-size: 12pt;">
+<p>&lt;span style=&quot;font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace;
+color: red; font-size: 12pt;&quot;&gt;
 0123 Plain <i>Italic</i> <u>Underline</u> <b>Bold</b>
 </span></p>
 
-<p>**<code>Example: &lt;span&gt; with \\(</code>**</p>
+<p><strong><code>Example: &lt;span&gt; with \\(</code></strong></p>
 
-<p><span style="font-family:'DejaVu Sans Mono','Andale Mono',monospace; font-size: 10pt;">
-Given:<br/>
-<span class="math">\(r_A = r_B = r_C = r_D = 30\ \texttt{mm} = 0.03\ \texttt{m}\)</span><br/>
-<span class="math">\(r_E = 90\ \text{mm} = 0.09\ \text{m}\)</span><br/>
-<span class="math">\(\omega_e = 180\ \text{rpm}\)</span><br/>
-</span></p>
-
-<p>**<code>Example: &lt;kbd&gt; with \\(</code>**</p>
-
-<p><kbd>
-Given:<br/>
-<span class="math">\(r_A = r_B = r_C = r_D = 30 mm = 0.03 m\)</span><br/>
-<span class="math">\(r_E = 90 mm = 0.09\ m\)</span><br/>
-<span class="math">\(\omega_e = 180\ \text{RPR} = \)</span><br/>
-</kbd></p>
-
-<p>**<code>Example: &lt;div&gt; with \\(</code>** _does not generally work. Pandoc <code>markdown</code> is OK. Pandoc <code>markdown_strict</code> may work with. use <code>&lt;span&gt;</code>_</p>
-
-<div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
-
-Given:<br>
-\\(\omega_a = 90\ \text{rpm}\\)<br>
+<span style="font-family:'DejaVu Sans Mono','Andale Mono',monospace; font-size: 10pt;">
+Given:  
+\\(r_A = r_B = r_C = r_D = 30\ \texttt{mm} = 0.03\ \texttt{m}\\)  
+\\(r_E = 90\ \text{mm} = 0.09\ \text{m}\\)  
 \\(\omega_e = 180\ \text{rpm}\\)  
+</span>
+
+<p><strong><code>Example: &lt;kbd&gt; with \\(</code></strong></p>
+
+<kbd>
+Given:  
+\\(r_A = r_B = r_C = r_D = 30 mm = 0.03 m\\)  
+\\(r_E = 90 mm = 0.09\ m\\)  
+\\(\omega_e = 180\ \text{RPR} = \\)  
+</kbd>
+
+<p><strong><code>Example: &lt;div&gt; with \\(</code></strong> <em>does not generally work. Pandoc <code>markdown</code> is OK. Pandoc <code>markdown_strict</code> may work with. use <code>&lt;span&gt;</code></em></p>
+
+<div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
+
+<p>Given:<br>
+<span class="math">\(\omega_a = 90\ \text{rpm}\)</span><br>
+<span class="math">\(\omega_e = 180\ \text{rpm}\)</span></p>
 
 </div>
 
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-Given:<br>
-$\omega_a = 90\ \text{rpm}$<br>
-$\omega_e = 180\ \text{rpm}$  
+<p>Given:<br>
+<span class="math">\(\omega_a = 90\ \text{rpm}\)</span><br>
+<span class="math">\(\omega_e = 180\ \text{rpm}\)</span></p>
 
 </div>
 
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-Given:<br>
-\(\omega_a = 90\ \text{rpm}\)<br>
-\(\omega_e = 180\ \text{rpm}\)  
+<p>Given:<br>
+(\omega_a = 90&nbsp;\text{rpm})<br>
+(\omega_e = 180&nbsp;\text{rpm})</p>
 
 </div>
 
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-`div` heading  
-=============  
+<h1><code>div</code> heading</h1>
 
 </div>
 
@@ -978,8 +968,8 @@ Given:<br>
 <h2>Observations <a id="Observations"><a href="#toc">▴</a></a></h2>
 
 <ul>
-<li><p><code>markdown</code> (discount) and <code>hoedown</code> use mutually exclusive LaTeX syntax. <code>markdown</code> only uses a single backslash <code>\</code>. <code>hoedown</code> uses both double backslash <code>\\</code> and dollar sign <code>$</code></p></li>
-<li><p>Except for LaTeX systax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
+<li><p><code>markdown</code> (discount) and <code>hoedown</code> use mutually exclusive LaTeX syntax. <code>markdown</code> only uses a single backslash <code>\`.</code>hoedown<code>uses both double backslash</code>\<code>and dollar sign</code>$`</p></li>
+<li><p>Except for LaTeX syntax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
 <li><p><code>pandoc</code> fenced code generates older <code>&lt;pre class=&quot;name&quot;&gt;&lt;code&gt;</code> instead of newer html5 recommended <code>&lt;pre&gt;&lt;code=&quot;langauge-name&quot;&gt;</code></p></li>
 <li><p><code>auto_identifiers</code> is unique to <code>pandoc</code>. May produce identifiers similar to ones created for a manually generated table of contents.</p></li>
 <li><p><code>markdown</code> (discount) fenced code does not work with html code. Neither tilde nor backslash code fences are properly converted to <code>&lt;pre&gt;&lt;code&gt;</code> tags. Angle brackets <code>&lt;&gt;</code> are not converted to html entities <code>&amp;lt;&amp;gt;</code>.</p></li>
@@ -987,19 +977,18 @@ Given:<br>
 
 <h2>Resources <a id="Resources"><a href="#toc">▴</a></a></h2>
 
-<p><a href="https://dev.w3.org/html5/html-author/charref">W3: Character Entity Reference Chart ⇗</a><br/>
-<a href="http://atomurl.net/math/">TeX Equation Editor ⇗</a> </p>
+<p><a href="https://dev.w3.org/html5/html-author/charref">W3: Character Entity Reference Chart ⇗</a><br />
+<a href="http://atomurl.net/math/">TeX Equation Editor ⇗</a></p>
 
 <div class="footnotes">
 <hr />
 <ol>
 
 <li id="fn:1">
-<p>You don't have to use a number. Arbitrary things like <code>[^footy note4]</code> and <code>[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes. </p>
+<p>You don't have to use a number. Arbitrary things like <code>[^footy note4]</code> and <code>[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes.</p>
 
-<p>Subsequent paragraphs are indented to show that they belong to the previous footnote. <em>Pandoc. Hoedown supports with return link in first paragraph.</em> <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote. <em>Pandoc. Hoedown supports with return link in first paragraph.</em> <a href="#fnref:1" title="return to body" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 </ol>
 </div>
-

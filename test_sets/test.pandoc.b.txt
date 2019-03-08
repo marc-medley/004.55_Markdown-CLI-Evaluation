@@ -1,20 +1,20 @@
 <h1><a href="http://daringfireball.net/projects/markdown/syntax">H1 md_evaluation</a> <a href="up.md">⇈</a></h1>
-<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages</em></p>
+<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55</em>Markdown-CLI-Evaluation_</p>
 <p><a href="down.md">see ⇊</a></p>
 <p><a id="toc"></a> <a href="#HeadingAnchor">Heading Anchor</a>: <a href="#idAfter">id after</a> | <a href="#Code">Code</a> | <a href="#Monospace">Monospace</a> | <a href="#Lists">Lists</a> | <a href="#Tables">Tables</a> | <a href="#Links">Links</a> | <a href="#Images">Images</a> | <a href="#VideoLink">Video Link</a> | <a href="#InlineHTML">Inline HTML</a> | <a href="#Mathematics">Mathematics</a> | <a href="#Entities">Entities</a> | <a href="#Fonts">Fonts</a> | <a href="#Xcode">Xcode</a> | <a href="#Observations">Observations</a> | <a href="#Resources">Resources</a></p>
 <p>Note: Pandoc <code>markdown_strict</code> appears to only recognized one title line at the top of file.</p>
-<h2>Heading Anchors <code>&lt;a id=&quot;name&quot;&gt;[▴](#toc)&lt;/a&gt;</code> <a id="HeadingAnchor"><a href="#toc">▴</a></a></h2>
-<p>Note: Discount, Hoedown, MacDown &amp; Pandoc can all work with <code>&lt;a id=&quot;name&quot;&gt;[▴](#toc)&lt;/a&gt;</code> after the heading. Pandoc does not render line as header if <code>&lt;a id=_&gt;&lt;/a&gt;</code> line preceeds the header line.</p>
+<h2>Heading Anchors <code>&lt;a id="name"&gt;[▴](#toc)&lt;/a&gt;</code> <a id="HeadingAnchor"><a href="#toc">▴</a></a></h2>
+<p>Note: Discount, Hoedown, MacDown &amp; Pandoc can all work with <code>&lt;a id="name"&gt;[▴](#toc)&lt;/a&gt;</code> after the heading. Pandoc does not render line as header if <code>&lt;a id=_&gt;&lt;/a&gt;</code> line preceeds the header line.</p>
 <pre class="markdown"><code>####&lt;a id=&quot;idBefore&quot; \&gt;&lt;/a&gt; H4: `id=` same line, before header.
 #### H4: `id=` same line, after header. [▴](#toc) &lt;a id=&quot;idAfter&quot;&gt;&lt;/a&gt;
 #### H4: USE THIS APPROACH. `&lt;a id=&quot;idAfter&quot;&gt;[▴](#toc)&lt;/a&gt; `&lt;a id=&quot;idAfter&quot;&gt;[▴](#toc)&lt;/a&gt;</code></pre>
-<h4>H4: USE THIS APPROACH. <code>&lt;a id=&quot;idAfter&quot;&gt;[▴](#toc)&lt;/a&gt;</code><a id="idAfter"><a href="#toc">▴</a></a></h4>
+<h4>H4: USE THIS APPROACH. <code>&lt;a id="idAfter"&gt;[▴](#toc)&lt;/a&gt;</code><a id="idAfter"><a href="#toc">▴</a></a></h4>
 <h2>Blank Line Before Header</h2>
 <table>
 <colgroup>
 <col style="width: 9%" />
-<col style="width: 24%" />
-<col style="width: 65%" />
+<col style="width: 23%" />
+<col style="width: 67%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -104,7 +104,7 @@
 <table>
 <colgroup>
 <col style="width: 24%" />
-<col style="width: 17%" />
+<col style="width: 16%" />
 <col style="width: 58%" />
 </colgroup>
 <thead>
@@ -152,11 +152,11 @@
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table>
 <colgroup>
 <col style="width: 25%" />
-<col style="width: 17%" />
-<col style="width: 57%" />
+<col style="width: 16%" />
+<col style="width: 58%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -173,8 +173,8 @@
 </tr>
 <tr class="even">
 <td>Quote</td>
-<td style="text-align: center;"><code>&quot;</code></td>
-<td>&quot;If enabled, <code>&quot;</code> becomes <code>&lt;q&gt;</code>. (Hoedown, MacDown: not smarty pants compatible)&quot;</td>
+<td style="text-align: center;"><code>"</code></td>
+<td>"If enabled, <code>"</code> becomes <code>&lt;q&gt;</code>. (Hoedown, MacDown: not smarty pants compatible)"</td>
 </tr>
 <tr class="odd">
 <td>Subscript</td>
@@ -271,17 +271,17 @@ $ pwd</code></pre>
 <pre class="c"><code>// ANSI C
 a = b + c;
 for (int i=0; i&lt;n; n++) {}</code></pre>
-<pre class="xml"><code>&lt;dict&gt;
+<pre class="markup"><code>&lt;dict&gt;
     &lt;key&gt;Message&lt;/key&gt;
     &lt;string&gt;Greetings.&lt;/string&gt;
     &lt;key&gt;Type&lt;/key&gt;
     &lt;integer&gt;0&lt;/integer&gt;
 &lt;/dict&gt;</code></pre>
-<pre class="html"><code>&lt;p&gt;Example html paragraph&lt;/p&gt;</code></pre>
-<p><strong><code>markdown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;</code> (discount). Note: <code>markdown</code> deliniate <code>html</code> the code fences. To show <code>html</code>, use <code>&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;</code> with escaped angle brackets <code>&amp;gt;</code> <code>&amp;lt;</code> for the enclosed example code. <strong><code>hoedown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;</code><br />
-<strong><code>pandoc</code></strong>: <code>&lt;pre class=&quot;c&quot;&gt;&lt;code&gt;</code> <em>using <code>--no-highlight</code> option with <code>fenced_code_attributes</code> flag enabled</em></p>
+<pre class="markup"><code>&lt;p&gt;Example html paragraph&lt;/p&gt;</code></pre>
+<p><strong><code>markdown</code></strong>: <code>&lt;pre&gt;&lt;code class="c"&gt;</code> (discount). Note: <code>markdown</code> deliniate <code>html</code> the code fences. To show <code>html</code>, use <code>&lt;pre&gt;&lt;code class="language-html"&gt;</code> with escaped angle brackets <code>&amp;gt;</code> <code>&amp;lt;</code> for the enclosed example code. <strong><code>hoedown</code></strong>: <code>&lt;pre&gt;&lt;code class="language-c"&gt;</code><br />
+<strong><code>pandoc</code></strong>: <code>&lt;pre class="c"&gt;&lt;code&gt;</code> <em>using <code>--no-highlight</code> option with <code>fenced_code_attributes</code> flag enabled</em></p>
 <p>Languages: actionscript apacheconf applescript bash (sh) c coffeescript cpp (c++) css fortran git go groovy handlebars html http ini java javascript (js) json latex less markdown matlab objectivec (objc) pascal perl php python ruby sql swift xml</p>
-<p>Note: <code>class=&quot;language-xyz&quot;</code> is <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-code-element">html5 recommended</a>.</p>
+<p>Note: <code>class="language-xyz"</code> is <a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-code-element">html5 recommended</a>.</p>
 <h2>Monospace <a id="Monospace"><a href="#toc">▴</a></a></h2>
 <p>Monospace 120</p>
 <pre class="swift"><code>123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*</code></pre>
@@ -292,12 +292,12 @@ for (int i=0; i&lt;n; n++) {}</code></pre>
 <h2>Lists <a id="Lists"><a href="#toc">▴</a></a></h2>
 <p><strong>Example ordered list</strong></p>
 <ol>
-<li>First ordered list item</li>
-<li>Another item
+<li><p>First ordered list item</p></li>
+<li><p>Another item</p>
 <ul>
 <li>Unordered sub-list.</li>
 </ul></li>
-<li>Actual numbers don't matter, just that it's a number
+<li><p>Actual numbers don't matter, just that it's a number</p>
 <ol>
 <li>Ordered sub-list
 <ol>
@@ -451,11 +451,11 @@ C. Actual numbers don't matter, just that it's a number</p>
 </tbody>
 </table>
 <p><strong>100%</strong></p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 41%" />
-<col style="width: 29%" />
-<col style="width: 29%" />
+<col style="width: 42%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -475,9 +475,9 @@ C. Actual numbers don't matter, just that it's a number</p>
 <hr />
 <h2>Links <a id="Links"><a href="#toc">▴</a></a></h2>
 <p>Autolink: <code>http://t.co</code> becomes <code>&lt;http://t.co&gt;</code> displayed as <a href="http://t.co" class="uri">http://t.co</a></p>
-<p>Footnotes<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>: inline <code>[^4]</code> &amp; <code>[^longnote]</code> references <code>[^4]: Some footnote text.</code> &amp; <code>[^ longnote]: Some longnote text.</code></p>
+<p>Footnotes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: inline <code>[^4]</code> &amp; <code>[^longnote]</code> references <code>[^4]: Some footnote text.</code> &amp; <code>[^ longnote]: Some longnote text.</code></p>
 <p>Here is an inline note.^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.] <em>Pandoc <code>inline_notes</code> only</em></p>
-<p><a href="mailto:someone@example.com">mailto:someone@example.com</a> (Discount, Hoedown, MacDown, Pandoc)</p>
+<p><a href="mailto:someone@example.com" class="uri">mailto:someone@example.com</a> (Discount, Hoedown, MacDown, Pandoc)</p>
 <h6>inline link</h6>
 <p><a href="http://www.site.org/" title="Daring Fireball Markdown: Syntax">Markdown Syntax ⇗</a></p>
 <pre class="markdown"><code> [Link Description](http://site &quot;title&quot;)</code></pre>
@@ -495,8 +495,8 @@ C. Actual numbers don't matter, just that it's a number</p>
  [url_id]: &lt;http://example.com/&gt; &quot;Angle Brackets OK&quot;</code></pre>
 <pre class="markdown"><code> [url_id]: http://example.com/some/long/url
      &quot;Title With White Space Padding&quot;</code></pre>
-<p><a href="#anchor21">Link via id=&quot;&quot;</a><br />
-<a href="#anchor22">Link via name=&quot;&quot;</a></p>
+<p><a href="#anchor21">Link via id=""</a><br />
+<a href="#anchor22">Link via name=""</a></p>
 <p><a id="anchor21"></a>Link to here via <code>id</code>. HTML5 creates a JavaScript global for each <code>id</code>. <code>name</code> is obsolete in HTML5, but may work and also not create globals. <code>id</code> must be unique in the whole document. <code>id</code> can contain <code>azAZ_-.</code></p>
 <pre class="markdown"><code> [Link via id=&quot;&quot;](#anchor21)
  &lt;a id=&quot;anchor21&quot;&gt;&lt;/a&gt;Link to here via `id`.
@@ -504,21 +504,21 @@ C. Actual numbers don't matter, just that it's a number</p>
 <p><a name="anchor22"></a>Link to here via a <em>fragment</em> <code>&lt;a&gt;</code> tag <code>name</code> attribute.</p>
 <pre class="markdown"><code> [Link text via name=&quot;&quot;](#anchor22)
  &lt;a name=&quot;anchor22&quot;&gt;&lt;/a&gt;Link to here via name.</code></pre>
-<p>Markdown <code>&lt;http://example.com/&gt;</code> expands to HTML <code>&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;</code></p>
-<p>Browser looks for absolute &quot;server&quot; path <code>file:///Markdown_files/figure1.png</code></p>
+<p>Markdown <code>&lt;http://example.com/&gt;</code> expands to HTML <code>&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;</code></p>
+<p>Browser looks for absolute "server" path <code>file:///Markdown_files/figure1.png</code></p>
 <h2>Images <a id="Images"><a href="#toc">▴</a></a></h2>
 <p>Inline-style (HTTP)<br />
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
-<p><code>![alt text](https://github.com/…/images/icon48.png &quot;Title Text&quot;)</code></p>
+<p><code>![alt text](https://github.com/…/images/icon48.png "Title Text")</code></p>
 <p>Inline-style (relative)<br />
 <a href="md_evaluation_files/figure1.png"><img src="md_evaluation_files/figure1.png" title="Title 1" alt="alt text" /></a><br />
-<code>![alt text](md_evaluation_files/figure1.png &quot;Title 1&quot;)</code></p>
+<code>![alt text](md_evaluation_files/figure1.png "Title 1")</code></p>
 <p>(relative, clickable)</p>
 <pre class="markdown"><code>[![alt text](md_evaluation_files/figure1.png &quot;Title 1&quot;)]
 (04.55_Markdown__QREF_files/figure1.png)</code></pre>
 <p>Reference-style (HTTP)<br />
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Title 2" alt="alt text" /></p>
-<p><code>![alt text][logo]</code> <code>[logo]: https://github.com/…/images/icon48.png &quot;Title 2&quot;</code></p>
+<p><code>![alt text][logo]</code> <code>[logo]: https://github.com/…/images/icon48.png "Title 2"</code></p>
 <p>Reference-style (relative)<br />
 <img src="md_evaluation_files/figure2.png" title="Title 2" alt="alt text" /></p>
 <pre class="markdown"><code> ![alt text][logo2]
@@ -538,7 +538,7 @@ C. Actual numbers don't matter, just that it's a number</p>
        width="256"
        height="96"&gt;&lt;/p&gt;
 </code></pre>
-<p>Browser looks for relative &quot;server&quot; path <code>file:///Users/~/Desktop/md_evaluation_files/figure3.png</code></p>
+<p>Browser looks for relative "server" path <code>file:///Users/~/Desktop/md_evaluation_files/figure3.png</code></p>
 <h2>Video Link <a id="VideoLink"><a href="#toc">▴</a></a></h2>
 <p><a href="https://www.youtube.com/watch?v=2Kos5VrtTtA"><img src="https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg" title="Wave Amplitude" alt="BOZEMAN VIDEO: Wave Amplitude" /></a></p>
 <pre class="markdown"><code>[![Text](path|url/p.jpg)](path|url/video)</code></pre>
@@ -566,15 +566,15 @@ C. Actual numbers don't matter, just that it's a number</p>
 </table>
 <p><a href="https://www.youtube.com/watch?v=2Kos5VrtTtA" ><img src="https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg"
 alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
-<p>Note: target=&quot;_blank&quot; does not work in MacDown.</p>
+<p>Note: target="_blank" does not work in MacDown.</p>
 <h2>Mathematics <a id="Mathematics"><a href="#toc">▴</a></a></h2>
 <blockquote>
 <p>Baseline: use <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>, <strong><code>$</code></strong>, <strong><code>$$</code></strong></p>
 </blockquote>
 <p><strong><code>markdown</code> (discount)</strong> : <code>$$</code>, <code>\(</code>, <code>\[</code>. Note: a drawback of <code>\(</code>, <code>\[</code> extension is that it precludes escaping <code>(</code> and <code>[</code>. Note: <code>markdown</code> and <code>hoedown</code> are mutually exclusive.</p>
-<p><strong><code>hoedown</code></strong> : <em><code>--math</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>--math-explicit</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em>(Note: &quot;guessing by context&quot; may generate unexpected output if <code>--math</code> is enabled, and <code>--math-explicit</code> is not enabled. <code>--math-explicit</code> also disables &quot;guessing by context&quot;)</em></p>
+<p><strong><code>hoedown</code></strong> : <em><code>--math</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>--math-explicit</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em>(Note: "guessing by context" may generate unexpected output if <code>--math</code> is enabled, and <code>--math-explicit</code> is not enabled. <code>--math-explicit</code> also disables "guessing by context")</em></p>
 <p><strong><code>pandoc</code></strong> : <em><code>+tex_math_double_backslash</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>+tex_math_dollars</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em><code>+tex_math_single_backslash</code></em> <strong><code>\(</code></strong>, <strong><code>\[</code></strong></p>
-<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Also, <code>&lt;br&gt;</code> is needed for line breaks.</em></p>
+<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Markdown inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags are not parsed as markdown. Also, <code>&lt;br&gt;</code> is needed for line breaks.</em></p>
 <p><a href="http://atomurl.net/math/">TeX Equations</a> <em>(MacDown, Atom:markdown-preview-plus)</em></p>
 <p><code>\\(A^T_S = B\\)</code> : <span class="math inline">\(A^T_S = B\)</span><br />
 <code>\\[A^T_S = B\\]</code> : <span class="math display">\[A^T_S = B\]</span><br />
@@ -659,7 +659,7 @@ color: red; font-size: 12pt;"> 0123 Plain <i>Italic</i> <u>Underline</u> <b>Bold
 <p><kbd> Given:<br />
 <span class="math inline">\(r_A = r_B = r_C = r_D = 30 mm = 0.03 m\)</span><br />
 <span class="math inline">\(r_E = 90 mm = 0.09\ m\)</span><br />
-<span class="math inline">\(\omega_e = 180\ \text{RPR} = \)</span><br />
+<span class="math inline">\(\omega_e = 180\ \text{RPR} =\)</span><br />
 </kbd></p>
 <p><strong><code>Example: &lt;div&gt; with \\(</code></strong> <em>does not generally work. Pandoc <code>markdown</code> is OK. Pandoc <code>markdown_strict</code> may work with. use <code>&lt;span&gt;</code></em></p>
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
@@ -685,8 +685,7 @@ Given:<br>
 </div>
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-`div` heading  
-=============  
+# `div` heading    
 
 </div>
 <h2>XCode <a id="Xcode"><a href="#toc">▴</a></a></h2>
@@ -703,18 +702,18 @@ Given:<br>
 <h2>Observations <a id="Observations"><a href="#toc">▴</a></a></h2>
 <ul>
 <li><p><code>markdown</code> (discount) and <code>hoedown</code> use mutually exclusive LaTeX syntax. <code>markdown</code> only uses a single backslash <code>\</code>. <code>hoedown</code> uses both double backslash <code>\\</code> and dollar sign <code>$</code></p></li>
-<li><p>Except for LaTeX systax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
-<li><p><code>pandoc</code> fenced code generates older <code>&lt;pre class=&quot;name&quot;&gt;&lt;code&gt;</code> instead of newer html5 recommended <code>&lt;pre&gt;&lt;code=&quot;langauge-name&quot;&gt;</code></p></li>
+<li><p>Except for LaTeX syntax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
+<li><p><code>pandoc</code> fenced code generates older <code>&lt;pre class="name"&gt;&lt;code&gt;</code> instead of newer html5 recommended <code>&lt;pre&gt;&lt;code="langauge-name"&gt;</code></p></li>
 <li><p><code>auto_identifiers</code> is unique to <code>pandoc</code>. May produce identifiers similar to ones created for a manually generated table of contents.</p></li>
 <li><p><code>markdown</code> (discount) fenced code does not work with html code. Neither tilde nor backslash code fences are properly converted to <code>&lt;pre&gt;&lt;code&gt;</code> tags. Angle brackets <code>&lt;&gt;</code> are not converted to html entities <code>&amp;lt;&amp;gt;</code>.</p></li>
 </ul>
 <h2>Resources <a id="Resources"><a href="#toc">▴</a></a></h2>
 <p><a href="https://dev.w3.org/html5/html-author/charref">W3: Character Entity Reference Chart ⇗</a><br />
 <a href="http://atomurl.net/math/">TeX Equation Editor ⇗</a></p>
-<section class="footnotes">
+<section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>You don't have to use a number. Arbitrary things like <code>[^footy note4]</code> and <code>[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes.</p>
-<p>Subsequent paragraphs are indented to show that they belong to the previous footnote. <em>Pandoc. Hoedown supports with return link in first paragraph.</em><a href="#fnref1">↩</a></p></li>
+<li id="fn1" role="doc-endnote"><p>You don't have to use a number. Arbitrary things like <code>[^footy note4]</code> and <code>[^footy note4]:</code> will also work. But they will <em>render</em> as numbered footnotes. Also, no need to keep your footnotes in order, I will sort out the order for you so they appear in the same order they were referenced in the text body. You can even keep some footnotes near where you referenced them, and collect others at the bottom of the file in the traditional place for footnotes.</p>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote. <em>Pandoc. Hoedown supports with return link in first paragraph.</em><a href="#fnref1" class="footnote-back" role="doc-backlink">↩</a></p></li>
 </ol>
 </section>

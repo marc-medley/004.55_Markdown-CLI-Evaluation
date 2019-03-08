@@ -1,6 +1,6 @@
 <h1><a href="http://daringfireball.net/projects/markdown/syntax">H1 md_evaluation</a>  <a href="up.md">⇈</a></h1>
 
-<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages</em></p>
+<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55</em>Markdown-CLI-Evaluation_</p>
 
 <p><a href="down.md">see ⇊</a></p>
 
@@ -328,7 +328,7 @@ a = b + c;
 for (int i=0; i&lt;n; n++) {}
 </code></pre>
 
-<pre><code class="language-xml">&lt;dict&gt;
+<pre><code class="language-markup">&lt;dict&gt;
     &lt;key&gt;Message&lt;/key&gt;
     &lt;string&gt;Greetings.&lt;/string&gt;
     &lt;key&gt;Type&lt;/key&gt;
@@ -336,7 +336,7 @@ for (int i=0; i&lt;n; n++) {}
 &lt;/dict&gt;
 </code></pre>
 
-<pre><code class="language-html">&lt;p&gt;Example html paragraph&lt;/p&gt;
+<pre><code class="language-markup">&lt;p&gt;Example html paragraph&lt;/p&gt;
 </code></pre>
 
 <p><strong><code>markdown</code></strong>: <code>&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;</code> (discount). Note: <code>markdown</code> deliniate <code>html</code> the code fences. To show <code>html</code>, use <code>&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;</code> with escaped angle brackets <code>&amp;gt;</code> <code>&amp;lt;</code> for the enclosed example code. 
@@ -734,7 +734,7 @@ alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
 
 <p><strong><code>pandoc</code></strong> : <em><code>+tex_math_double_backslash</code></em> for <strong><code>\\(</code></strong>, <strong><code>\\[</code></strong>. <em><code>+tex_math_dollars</code></em> for <strong><code>$</code></strong>, <strong><code>$$</code></strong>. <em><code>+tex_math_single_backslash</code></em> <strong><code>\(</code></strong>, <strong><code>\[</code></strong></p>
 
-<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Also, <code>&lt;br&gt;</code> is needed for line breaks.</em>  </p>
+<p><em>Note: <code>LaTeX</code> inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags uses only single escape <code>\(…\)</code>, <code>\[…\]</code>. Markdown inside <code>&lt;div&gt;</code> or <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</code> html tags are not parsed as markdown.  Also, <code>&lt;br&gt;</code> is needed for line breaks.</em>  </p>
 
 <p><a href="http://atomurl.net/math/">TeX Equations</a>  <em>(MacDown, Atom:markdown-preview-plus)</em>  </p>
 
@@ -888,8 +888,7 @@ Given:<br>
 
 <div style="font-family:'DejaVu Sans Mono','Andale Mono',Courier,Monaco,'Courier New',monospace; font-size: 10pt;">
 
-`div` heading  
-=============  
+# `div` heading    
 
 </div>
 
@@ -912,7 +911,7 @@ Given:<br>
 
 <ul>
 <li><p><code>markdown</code> (discount) and <code>hoedown</code> use mutually exclusive LaTeX syntax. <code>markdown</code> only uses a single backslash <code>\</code>.  <code>hoedown</code> uses both double backslash <code>\\</code> and dollar sign <code>$</code></p></li>
-<li><p>Except for LaTeX systax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
+<li><p>Except for LaTeX syntax, <code>markdown</code> (discount), <code>hoedown</code> and <code>pandoc</code> can be configured to produce similar output from the same input.</p></li>
 <li><p><code>pandoc</code> fenced code generates older <code>&lt;pre class=&quot;name&quot;&gt;&lt;code&gt;</code> instead of newer html5 recommended <code>&lt;pre&gt;&lt;code=&quot;langauge-name&quot;&gt;</code></p></li>
 <li><p><code>auto_identifiers</code> is unique to <code>pandoc</code>. May produce identifiers similar to ones created for a manually generated table of contents.</p></li>
 <li><p><code>markdown</code> (discount) fenced code does not work with html code.  Neither tilde nor backslash code fences are properly converted to <code>&lt;pre&gt;&lt;code&gt;</code> tags. Angle brackets <code>&lt;&gt;</code> are not converted to html entities <code>&amp;lt;&amp;gt;</code>.</p></li>

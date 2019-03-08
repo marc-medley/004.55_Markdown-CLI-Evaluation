@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#########################
+### FILENAME: test.sh ###
+#########################
+### INPUT FILES: header_cdn.html, footer_cdn.html, md_evaluation.md
+### IMAGE FILES: md_evaluation_files/* referenced by markdown.
+###
+### EXECUTION: ./test.sh
+
 HEADER_FILE="header_cdn.html"
 FOOTER_FILE="footer_cdn.html"
 
@@ -41,37 +49,38 @@ INPUT_FILE=md_evaluation.md
 # githubtags       # Allow underscore and dash in passed through element names (not default).
 # urlencodedanchor # Use url-encoded chars for multibyte and nonalphanumeric chars rather than dots in toc links.
 
-### all preferred settings
-BODY_FILE="test.discount.a"
-OPTIONS="+tabstop"
-OPTIONS="$OPTIONS,-smarty"
-### `+emphasis` enables intraword `_` emphasis
-OPTIONS="$OPTIONS,+emphasis"
-OPTIONS="$OPTIONS,+strikethrough"
-OPTIONS="$OPTIONS,+footnote"
-OPTIONS="$OPTIONS,+fencedcode"
-OPTIONS="$OPTIONS,+latex"
-/opt/discount/current/bin/markdown \
-  -f $OPTIONS \
-  -o $BODY_FILE.txt \
-  $INPUT_FILE
-cat $HEADER_FILE $BODY_FILE.txt $FOOTER_FILE > $BODY_FILE.html
-
-### without LaTeX
-BODY_FILE="test.discount.b"
-OPTIONS="+tabstop"
-OPTIONS="$OPTIONS,-smarty"
-OPTIONS="$OPTIONS,-emphasis"
-OPTIONS="$OPTIONS,-superscript"
-OPTIONS="$OPTIONS,+strikethrough"
-OPTIONS="$OPTIONS,+footnote"
-OPTIONS="$OPTIONS,+fencedcode"
-OPTIONS="$OPTIONS,+latex"
-/opt/discount/current/bin/markdown \
-  -f $OPTIONS \
-  -o $BODY_FILE.txt \
-  $INPUT_FILE
-cat $HEADER_FILE $BODY_FILE.txt $FOOTER_FILE > $BODY_FILE.html
+### uncomment if running discount markdown.
+# ### all preferred settings
+# BODY_FILE="test.discount.a"
+# OPTIONS="+tabstop"
+# OPTIONS="$OPTIONS,-smarty"
+# ### `+emphasis` enables intraword `_` emphasis
+# OPTIONS="$OPTIONS,+emphasis"
+# OPTIONS="$OPTIONS,+strikethrough"
+# OPTIONS="$OPTIONS,+footnote"
+# OPTIONS="$OPTIONS,+fencedcode"
+# OPTIONS="$OPTIONS,+latex"
+# /opt/discount/current/bin/markdown \
+#   -f $OPTIONS \
+#   -o $BODY_FILE.txt \
+#   $INPUT_FILE
+# cat $HEADER_FILE $BODY_FILE.txt $FOOTER_FILE > $BODY_FILE.html
+# 
+# ### without LaTeX
+# BODY_FILE="test.discount.b"
+# OPTIONS="+tabstop"
+# OPTIONS="$OPTIONS,-smarty"
+# OPTIONS="$OPTIONS,-emphasis"
+# OPTIONS="$OPTIONS,-superscript"
+# OPTIONS="$OPTIONS,+strikethrough"
+# OPTIONS="$OPTIONS,+footnote"
+# OPTIONS="$OPTIONS,+fencedcode"
+# OPTIONS="$OPTIONS,+latex"
+# /opt/discount/current/bin/markdown \
+#   -f $OPTIONS \
+#   -o $BODY_FILE.txt \
+#   $INPUT_FILE
+# cat $HEADER_FILE $BODY_FILE.txt $FOOTER_FILE > $BODY_FILE.html
 
 ###############
 ### HOEDOWN ###
@@ -146,40 +155,42 @@ cat $HEADER_FILE $BODY_FILE.txt $FOOTER_FILE > $BODY_FILE.html
 #################################
 ### NOTE: Discount `markdown` and MultiMarkdown `markdown` have the same command name.
 ### Thus, Discount `markdown` and MultiMarkdown `markdown` mutually exclusive brew installs.
-# multimarkdown  [OPTION...] [FILE...]
+# multimarkdown  [OPTION...] [<FILE>...]
+# 
+# 	<FILE>               read input from file(s) -- use stdin if no files given
 # 
 # Options:
-# -h, --help             Show help
-#     --help-all         Show more help options ... does not work.
-# -v, --version          Show version information
+# --help                 Show help
+# --version              Show version information
+# 
 # -o, --output=FILE      Send output to FILE
 # -t, --to=FORMAT        Convert to FORMAT
-# Available FORMATs: html(default), latex, beamer, memoir, odf, opml, lyx, mmd
+#     FORMATs: html(default)|latex|beamer|memoir|mmd|odt|fodt|epub|opml|bundle|bundlezip
+#
 # -b, --batch            Process each file separately
-# -c, --compatibility    Markdown compatibility mode. XHTML
+# -c, --compatibility    Markdown compatibility mode.
 # -f, --full             Force a complete document
 # -s, --snippet          Force a snippet
-# --process-html         Process Markdown inside of raw HTML
+#
 # -m, --metadata-keys    List all metadata keys
 # -e, --extract          Extract specified metadata
-# -x, --manifest         Show manifest of all transcluded files
+#
 # --random               Use random numbers for footnote anchors
 # 
 # -a, --accept           Accept all CriticMarkup changes
 # -r, --reject           Reject all CriticMarkup changes
 # 
-# --smart, --nosmart     Toggle smart typography
-# --notes, --nonotes     Toggle footnotes
-# --labels, --nolabels   Disable id attributes for headers
-# --mask, --nomask       Mask email addresses in HTML
-# --escaped-line-breaks  Enable escaped line breaks
+# --nosmart              Disable smart typography
+# --nolabels             Disable id attributes for headers
+# --notransclude         Disable file transclusion
+# --opml                 Convert OPML source to plain text before processing
 # 
+# -l, --lang=LANG        language/smart quote localization, LANG = en|es|de|fr|he|nl|sv
 
 # all preferred settings
 BODY_FILE="test.multimarkdown.a"
 multimarkdown \
   --nosmart \
-  --notes \
   --nolabels \
   $INPUT_FILE \
   > $BODY_FILE.txt
