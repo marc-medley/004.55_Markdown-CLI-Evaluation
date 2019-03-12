@@ -32,11 +32,9 @@
 <body>
   <div class="container">
   <!-- :COMMON: HEADER -->
-<h1><a href="http://daringfireball.net/projects/markdown/syntax">H1 md_evaluation</a> <a href="up.md">⇈</a></h1>
+<h1><a href="http://daringfireball.net/projects/markdown/syntax">H1 md_evaluation</a></h1>
 
-<p><em>See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdown-CLI-Evaluation</em></p>
-
-<p><a href="down.md">see ⇊</a></p>
+<p><em>See: <a href="https://github.com/marc-medley/004.55_Markdown-CLI-Evaluation">004.55_Markdown-CLI-Evaluation</a></em></p>
 
 <p><a id="toc"></a>
 <a href="#HeadingAnchor">Heading Anchor</a>:
@@ -368,9 +366,6 @@ alert(s);
 <pre><code>Triple tilde ~ or back-ticks creates a &lt;pre&gt;&lt;code&gt; block.
 No language indicated. No syntax highlighting.
 </code></pre>
-
-<p>If <code>inline code with `backticks`</code> use double backticks:<br />
-<code>``inline code with `backticks` ``</code> (spaces must preceed the final set of backticks)</p>
 
 <pre><code class="bash"># bash
 $ ls -alx
@@ -812,7 +807,7 @@ C. Actual numbers don't matter, just that it's a number</p>
 <p><a href="https://www.youtube.com/watch?v=2Kos5VrtTtA" ><img src="https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg"
 alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
 
-<p>Note: target=&quot;_blank&quot; does not work in MacDown.</p>
+<p>Note: <code>target=&quot;_blank&quot;</code> does not work in MacDown.</p>
 
 <h2>Mathematics <a id="Mathematics"><a href="#toc">▴</a></a></h2>
 
@@ -845,23 +840,29 @@ alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a></p>
 
 <h4>The probability of getting <code>k</code> heads when flipping <code>n</code> coins is</h4>
 
-<p><span class="math">\(P(E) = {n \choose k} p^k (1-p)^{ n-k}\)</span></p>
+<p>Dollar syntax: <span class="math">\(P(E) = {n \choose k} p^k (1-p)^{ n-k}\)</span></p>
 
 <p><span class="math">\[P(E) = {n \choose k} p^k (1-p)^{ n-k}\]</span></p>
 
+<p>Double backslash syntax: <span class="math">\(P(E) = {n \choose k} p^k (1-p)^{ n-k} \)</span></p>
+
 <p><span class="math">\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]</span></p>
+
+<p>Single backslash syntax: (P(E) = {n \choose k} p<sup>k</sup> (1-p)^{ n-k} )</p>
 
 <p>[P(E) = {n \choose k} p<sup>k</sup> (1-p)^{ n-k} ]</p>
 
-<p>(P(E) = {n \choose k} p<sup>k</sup> (1-p)^{ n-k} )</p>
+<p>Note: LaTeX inline <code>\(...\)</code>, LaTeX display <code>\[...\]</code>, TeX shorthand inline <code>$...$</code>, TeX shorthand display <code>$$...$$</code>.</p>
 
 <h4>Maxwell’s Equations</h4>
 
-<p><span class="math">\[  \begin{aligned}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+<p><em><code>$$...$$</code> syntax</em> (fails to render correctly in multimarkdown)</p>
+
+<p>$$ \begin{aligned}
+\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \ \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \
+\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \
 \nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}
-\]</span></p>
+$$</p>
 
 <p><em>Note: markdown-preview-plus prefers light syntax highlights</em></p>
 
@@ -988,16 +989,16 @@ Given:
 
 <ol>
 <li>Added <code>Resources/</code> folder to the project.</li>
-<li>Set Build Phase rule for each *.md file
+<li>Set Build Phase rule for each <code>*.md</code> file
 
 <ol>
 <li>Select Project Navigator &gt; your project</li>
 <li>Select target &gt; Build Phases</li>
-<li>Move (Drag &amp; Drop) *.md files from <code>Compile Sources</code> to <code>Copy Bundle Resources</code>.</li>
+<li>Move (Drag &amp; Drop) <code>*.md</code> files from <code>Compile Sources</code> to <code>Copy Bundle Resources</code>.</li>
 </ol></li>
 </ol>
 
-<p><em>May be possible to add a Build Rules action script for *.md files</em></p>
+<p><em>May be possible to add a Build Rules action script for <code>*.md</code> files</em></p>
 
 <h2>Observations <a id="Observations"><a href="#toc">▴</a></a></h2>
 

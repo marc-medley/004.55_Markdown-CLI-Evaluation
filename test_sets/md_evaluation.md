@@ -1,9 +1,7 @@
-# [H1 md_evaluation][title]  [⇈](up.md)
+# [H1 md_evaluation][title]
 [title]:http://daringfireball.net/projects/markdown/syntax
 
-_See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdown-CLI-Evaluation_
-
-[see ⇊](down.md)
+_See: [004.55_Markdown-CLI-Evaluation](https://github.com/marc-medley/004.55_Markdown-CLI-Evaluation)_
 
 <a id="toc"></a>
 [Heading Anchor](#HeadingAnchor):
@@ -25,8 +23,7 @@ _See Also: 004.55=MarkdownTools, 004.55=Parsing Markup Languages, 004.55_Markdow
 
 Note: Pandoc `markdown_strict` appears to only recognized one title line at the top of file.
 
-Heading Anchors `<a id="name">[▴](#toc)</a>` <a id="HeadingAnchor">[▴](#toc)</a>
----------------------------------
+## Heading Anchors `<a id="name">[▴](#toc)</a>` <a id="HeadingAnchor">[▴](#toc)</a>
 
 Note: Discount, Hoedown, MacDown & Pandoc can all work with `<a id="name">[▴](#toc)</a>` after the heading. Pandoc does not render line as header if `<a id=_></a>` line preceeds the header line.
 
@@ -146,8 +143,7 @@ If intra_letter_emphasis is not enabled, then `_` and `*` are are unmodified in 
 
 N0-BREAK SPACE : U+00A0 `&nbsp;`. Directly type char into code segments.
 
-Code <a id="Code">[▴](#toc)</a>
-----
+## Code <a id="Code">[▴](#toc)</a>
 
 Inline `code` has `single back-ticks around` it.
 
@@ -161,9 +157,6 @@ alert(s);
 Triple tilde ~ or back-ticks creates a <pre><code> block.
 No language indicated. No syntax highlighting.
 ```  
-
-If ``inline code with `backticks` `` use double backticks:  
-```` ``inline code with `backticks` `` ````  (spaces must preceed the final set of backticks)
 
 ``` bash
 # bash
@@ -198,8 +191,7 @@ Languages: actionscript apacheconf applescript bash (sh) c coffeescript cpp (c++
 
 Note: `class="language-xyz"` is [html5 recommended](https://www.w3.org/TR/html5/text-level-semantics.html#the-code-element).
 
-Monospace <a id="Monospace">[▴](#toc)</a>
----------
+## Monospace <a id="Monospace">[▴](#toc)</a>
 
 Monospace 120
 
@@ -217,8 +209,7 @@ Landscape 85
 123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*12345
 ```
 
-Lists <a id="Lists">[▴](#toc)</a>
------
+## Lists <a id="Lists">[▴](#toc)</a>
 
 **Example ordered list**
 
@@ -248,8 +239,7 @@ C. Actual numbers don't matter, just that it's a number
 + Or `+` pluses
 
 
-Tables _(extension)_  <a id="Tables">[▴](#toc)</a>
---------------------
+## Tables _(extension)_  <a id="Tables">[▴](#toc)</a>
 
 Pandoc: `table_captions`, `simple_tables`, `multiline_tables`, `grid_tables`, `pipe_tables` 
 
@@ -323,8 +313,7 @@ _html `<table>`_
 
 ***
 
-Links <a id="Links">[▴](#toc)</a>
------
+## Links <a id="Links">[▴](#toc)</a>
 
 Autolink: `http://t.co` becomes `<http://t.co>` displayed as <http://t.co>
 
@@ -394,8 +383,8 @@ Markdown `<http://example.com/>` expands to HTML `<a href="http://example.com/">
 
 Browser looks for absolute "server" path `file:///Markdown_files/figure1.png`
 
-Images <a id="Images">[▴](#toc)</a>
-------
+## Images <a id="Images">[▴](#toc)</a>
+
 Inline-style (HTTP)  
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
@@ -458,16 +447,15 @@ HTML Style (Relative)
 Browser looks for relative "server" path `file:///Users/~/Desktop/md_evaluation_files/figure3.png`
 
 
-Video Link <a id="VideoLink">[▴](#toc)</a>
-----------
+## Video Link <a id="VideoLink">[▴](#toc)</a>
+
 [![BOZEMAN VIDEO: Wave Amplitude](https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg "Wave Amplitude") ](https://www.youtube.com/watch?v=2Kos5VrtTtA)
 
 ```markdown
 [![Text](path|url/p.jpg)](path|url/video)
 ```
 
-Inline HTML <a id="InlineHTML">[▴](#toc)</a>
------------
+## Inline HTML <a id="InlineHTML">[▴](#toc)</a>
 
 <dl>
   <dt>Definition list</dt>
@@ -496,10 +484,9 @@ Inline HTML <a id="InlineHTML">[▴](#toc)</a>
 <a href="https://www.youtube.com/watch?v=2Kos5VrtTtA" ><img src="https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg"
 alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a>
 
-Note: target="_blank" does not work in MacDown.
+Note: `target="_blank"` does not work in MacDown.
 
-Mathematics <a id="Mathematics">[▴](#toc)</a>
------------
+## Mathematics <a id="Mathematics">[▴](#toc)</a>
 
 > Baseline: use **`\\(`**, **`\\[`**, **`$`**, **`$$`**
 
@@ -529,30 +516,34 @@ _Note: `LaTeX` inside `<div>` or `<table><tr><td>` html tags uses only single es
 
 #### The probability of getting `k` heads when flipping `n` coins is
 
-$P(E) = {n \choose k} p^k (1-p)^{ n-k}$
+Dollar syntax: $P(E) = {n \choose k} p^k (1-p)^{ n-k}$
 
 $$P(E) = {n \choose k} p^k (1-p)^{ n-k}$$
 
+Double backslash syntax: \\(P(E) = {n \choose k} p^k (1-p)^{ n-k} \\)
+
 \\[P(E) = {n \choose k} p^k (1-p)^{ n-k} \\]
+
+Single backslash syntax: \(P(E) = {n \choose k} p^k (1-p)^{ n-k} \)
 
 \[P(E) = {n \choose k} p^k (1-p)^{ n-k} \]
 
-\(P(E) = {n \choose k} p^k (1-p)^{ n-k} \)
-
+Note: LaTeX inline `\(...\)`, LaTeX display `\[...\]`, TeX shorthand inline `$...$`, TeX shorthand display `$$...$$`.
 
 #### Maxwell’s Equations
 
-\\[  \begin{aligned}
+_`$$...$$` syntax_ (fails to render correctly in multimarkdown)
+
+$$  \begin{aligned}
 \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
 \nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 \nabla \cdot \vec{\mathbf{B}} & = 0 \end{aligned}
-\\]
-
+$$
 
 *Note: markdown-preview-plus prefers light syntax highlights*
 
-Entities <a id="Entities">[▴](#toc)</a>
---------
+
+## Entities <a id="Entities">[▴](#toc)</a>
 
 ▴ `&blacktriangle;` `&utrif;` _… link to top table of contents_  
 ⇗ `&neArr;`  North East Arrow _… link to offsite_  
@@ -584,8 +575,7 @@ see: com.apple.CharacterPicker.plist
 see also: com.apple.CharacterPaletteM.plist  
 see: `_PROCESS_/KeyBoard/!FavoriteChars.txt` 
 
-Fonts <a id="Fonts">[▴](#toc)</a>
------
+## Fonts <a id="Fonts">[▴](#toc)</a>
 
 'Andale Mono', 'DejaVu Sans Mono',
 
@@ -673,19 +663,17 @@ Given:<br>
 
 </div>
 
-XCode <a id="Xcode">[▴](#toc)</a>
------
+## XCode <a id="Xcode">[▴](#toc)</a>
 
 1. Added `Resources/` folder to the project. 
-2. Set Build Phase rule for each *.md file
+2. Set Build Phase rule for each `*.md` file
     1. Select Project Navigator > your project
     2. Select target > Build Phases
-    3. Move (Drag & Drop) *.md files from `Compile Sources` to `Copy Bundle Resources`.
+    3. Move (Drag & Drop) `*.md` files from `Compile Sources` to `Copy Bundle Resources`.
 
-_May be possible to add a Build Rules action script for *.md files_
+_May be possible to add a Build Rules action script for `*.md` files_
 
-Observations <a id="Observations">[▴](#toc)</a>
-------------
+## Observations <a id="Observations">[▴](#toc)</a>
 
 * `markdown` (discount) and `hoedown` use mutually exclusive LaTeX syntax. `markdown` only uses a single backslash `\`.  `hoedown` uses both double backslash `\\` and dollar sign `$`
 
@@ -697,8 +685,7 @@ Observations <a id="Observations">[▴](#toc)</a>
 
 * `markdown` (discount) fenced code does not work with html code.  Neither tilde nor backslash code fences are properly converted to `<pre><code>` tags. Angle brackets `<>` are not converted to html entities `&lt;&gt;`.
 
-Resources <a id="Resources">[▴](#toc)</a>
----------
+## Resources <a id="Resources">[▴](#toc)</a>
 
 [W3: Character Entity Reference Chart ⇗](https://dev.w3.org/html5/html-author/charref)  
 [TeX Equation Editor ⇗](http://atomurl.net/math/)  
