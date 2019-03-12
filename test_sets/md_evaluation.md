@@ -532,7 +532,7 @@ Note: LaTeX inline `\(...\)`, LaTeX display `\[...\]`, TeX shorthand inline `$..
 
 #### Maxwell’s Equations
 
-_`$$...$$` syntax_ (fails to render correctly in multimarkdown)
+_`$$...$$` syntax_ (multimarkdown fails get generate correct HTML LaTeX)
 
 $$  \begin{aligned}
 \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
