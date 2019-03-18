@@ -65,9 +65,11 @@ Note: Use of `\(`, `\[` single escape syntax _disallows escaping_ `(` and `[` fo
 * [DaringFireball: `markdown` ⇗](https://daringfireball.net/projects/markdown/) _Implementation: `Perl`_  v1.0.1 2004.12.17
 * [Discount `markdown` ⇗](http://www.pell.portland.or.us/~orc/Code/discount/), [github ⇗](https://github.com/Orc/discount), _Implementation: `C`_  
 * [GitHub/hoedown: `hoedown` ⇗](https://github.com/hoedown/hoedown) _Implementation: `C`_ v3.0.7 2015.12.03
+* [Markingbird](https://github.com/kristopherjohnson/Markingbird) _Swift port of MarkdownSharp. No longer actively maintained._
 * Pandoc
     * [Pandoc User’s Guide ⇗](http://pandoc.org/MANUAL.html)
     * [GitHub: pandoc ⇗](https://github.com/jgm/pandoc) _Implementation: `Haskell`_
+* [Perfect-Markdown](https://github.com/PerfectlySoft/Perfect-Markdown) _Swift wrapper which directly builds on `libupskirt` which was forked from `sundown`._
 
 **CommonMark**
 
