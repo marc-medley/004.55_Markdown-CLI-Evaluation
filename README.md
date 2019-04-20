@@ -1,9 +1,8 @@
 # [004.55 Markdown CLI Evaluation][t]
 [t]:https://github.com/marc-medley/004.55_Markdown-CLI-Evaluation
 
-<section id="toc">
-[Objectives](#Objectives) • [Process](#Process) • [Observations](#Observations) • [Resources](#Resources)
-<section>
+<span id="toc" class="anchor"></span>
+[Objectives](#Objectives) • [Process](#Process) • [Observations](#Observations) • [Resources](#linkResources)
 
 _A comparative evalution of open source CLI Markdown processors: discount `markdown`, `hoedown`, `multimarkdown` and `pandoc`._
 
@@ -61,8 +60,7 @@ Note: Use of `\(`, `\[` single escape syntax _disallows escaping_ `(` and `[` fo
 * **Options.** Pandoc has the largest set of enable/disable options. [see PandocMarkdownOptions.md](pandoc/PandocMarkdownOptions.md)
 * `<pre><code>` Pandoc generates `<pre class="markdown"><code>` instead of `<pre><code class="language-markdown">`.
 
-<section id="Resources">
-## Resources [▴](#toc)
+## Resources <span id="linkResources" class="anchor">[▴](#toc)</span>
 
 * [DaringFireball: `markdown` ⇗](https://daringfireball.net/projects/markdown/) _Implementation: `Perl`_  v1.0.1 2004.12.17
 * [Discount `markdown` ⇗](http://www.pell.portland.or.us/~orc/Code/discount/), [github ⇗](https://github.com/Orc/discount), _Implementation: `C`_  
