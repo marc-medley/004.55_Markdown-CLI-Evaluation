@@ -92,5 +92,3 @@ Note: Use of `\(`, `\[` single escape syntax _disallows escaping_ `(` and `[` fo
 * _Homebrew installs `multimarkdown` with binary `markdown`._
     * brew conflict: `discount`, `markdown` and `multimarkdown` install `markdown` binaries.
     * brew conflict: mtools (MSDOS file manipulation) … both install `mmd` binaries.
-
-</section>
