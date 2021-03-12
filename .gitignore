@@ -68,7 +68,6 @@ Packages
 .build
 xcuserdata
 #*.xcodeproj
-.swiftpm
 DerivedData/
 
 # CocoaPods
@@ -315,6 +314,11 @@ gradle-app.setting
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#################
+## LibreOffice ##
+#################
+.~lock*
 
 ###########
 ## Maven ##
