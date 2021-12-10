@@ -3,37 +3,38 @@
 
 _See: [004.55_Markdown-CLI-Evaluation](https://github.com/marc-medley/004.55_Markdown-CLI-Evaluation)_
 
-<a id="toc"></a>
-[Heading Anchor](#HeadingAnchor):
-[id after](#idAfter) |
-[Code](#Code) |
-[Monospace](#Monospace) |
-[Lists](#Lists) |
-[Tables](#Tables) |
-[Links](#Links) |
-[Images](#Images) |
-[Video Link](#VideoLink) |
-[Inline HTML](#InlineHTML) |
-[Mathematics](#Mathematics) |
-[Entities](#Entities) |
-[Fonts](#Fonts) |
-[Xcode](#Xcode) |
-[Observations](#Observations) | 
-[Resources](#Resources)
+## Contents <a id="contents"></a>
+[Heading Anchor](#heading-anchor-):
+[id after](#id-after-) |
+[Code](#code-) |
+[Monospace](#monospace-) |
+[Lists](#lists-) |
+[Tables _(extension)_](#tables-extension-) |
+[Links](#links-) |
+[Images](#images-) |
+[Video Link](#video-link-) |
+[Inline HTML](#inline-html-) |
+[Mathematics](#mathematics-) |
+[Mathematics (GitHub/GitLab)](#mathematics-githubgitlab-) |
+[Entities](#entities-) |
+[Fonts](#fonts-) |
+[Xcode](#xcode-) |
+[Observations](#observations-) | 
+[Resources](#resources-)
 
 Note: Pandoc `markdown_strict` appears to only recognized one title line at the top of file.
 
-## Heading Anchors `<a id="name"></a>[▴](#toc)` <a id="HeadingAnchor"></a>[▴](#toc)
+## Heading Anchors `<a id="name-"></a><sup>[▴](#contents)</sup>` <a id="heading-anchor-"></a><sup>[▴](#contents)</sup>
 
-Note: Discount, Hoedown, MacDown & Pandoc can all work with `<a id="name"></a>[▴](#toc)` after the heading. Pandoc does not render line as header if `<a id=_></a>` line preceeds the header line.
+Note: Discount, Hoedown, MacDown & Pandoc can all work with `<a id="name-"></a><sup>[▴](#contents)</sup>` after the heading. Pandoc does not render line as header if `<a id=_></a>` line preceeds the header line.
 
 ``` markdown
 ####<a id="idBefore" \></a> H4: `id=` same line, before header.
-#### H4: `id=` same line, after header. [▴](#toc) <a id="idAfter"></a>
-#### H4: USE THIS APPROACH. `<a id="idAfter"></a>[▴](#toc) `<a id="idAfter"></a>[▴](#toc)
+#### H4: `id=` same line, after header. <sup>[▴](#contents)</sup> <a id="id-after-"></a>
+#### H4: USE THIS APPROACH. `<a id="id-after-"></a><sup>[▴](#contents)</sup> `<a id="id-after-"></a><sup>[▴](#contents)</sup>
 ```
 
-#### H4: USE THIS APPROACH. `<a id="idAfter"></a>[▴](#toc) `<a id="idAfter"></a>[▴](#toc)
+#### H4: USE THIS APPROACH. `<a id="id-after-"></a><sup>[▴](#contents)</sup> `<a id="id-after-"></a><sup>[▴](#contents)</sup>
 
 ## Blank Line Before Header
 
@@ -143,7 +144,7 @@ If intra_letter_emphasis is not enabled, then `_` and `*` are are unmodified in 
 
 N0-BREAK SPACE : U+00A0 `&nbsp;`. Directly type char into code segments.
 
-## Code <a id="Code"></a>[▴](#toc)
+## Code <a id="code-"></a><sup>[▴](#contents)</sup>
 
 Inline `code` has `single back-ticks around` it.
 
@@ -191,7 +192,7 @@ Languages: actionscript apacheconf applescript bash (sh) c coffeescript cpp (c++
 
 Note: `class="language-xyz"` is [html5 recommended](https://www.w3.org/TR/html5/text-level-semantics.html#the-code-element).
 
-## Monospace <a id="Monospace"></a>[▴](#toc)
+## Monospace <a id="monospace-"></a><sup>[▴](#contents)</sup>
 
 Monospace 120
 
@@ -209,7 +210,7 @@ Landscape 85
 123456789*123456789*123456789*123456789*123456789*123456789*123456789*123456789*12345
 ```
 
-## Lists <a id="Lists"></a>[▴](#toc)
+## Lists <a id="lists-"></a><sup>[▴](#contents)</sup>
 
 **Example ordered list**
 
@@ -239,7 +240,7 @@ C. Actual numbers don't matter, just that it's a number
 + Or `+` pluses
 
 
-## Tables _(extension)_  <a id="Tables"></a>[▴](#toc)
+## Tables _(extension)_  <a id="tables-extension-"></a><sup>[▴](#contents)</sup>
 
 Pandoc: `table_captions`, `simple_tables`, `multiline_tables`, `grid_tables`, `pipe_tables` 
 
@@ -313,7 +314,7 @@ _html `<table>`_
 
 ***
 
-## Links <a id="Links"></a>[▴](#toc)
+## Links <a id="links-"></a><sup>[▴](#contents)</sup>
 
 Autolink: `http://t.co` becomes `<http://t.co>` displayed as <http://t.co>
 
@@ -383,7 +384,7 @@ Markdown `<http://example.com/>` expands to HTML `<a href="http://example.com/">
 
 Browser looks for absolute "server" path `file:///Markdown_files/figure1.png`
 
-## Images <a id="Images"></a>[▴](#toc)
+## Images <a id="images-"></a><sup>[▴](#contents)</sup>
 
 Inline-style (HTTP)  
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
@@ -447,7 +448,7 @@ HTML Style (Relative)
 Browser looks for relative "server" path `file:///Users/~/Desktop/md_evaluation_files/figure3.png`
 
 
-## Video Link <a id="VideoLink"></a>[▴](#toc)
+## Video Link <a id="video-link-"></a><sup>[▴](#contents)</sup>
 
 [![BOZEMAN VIDEO: Wave Amplitude](https://i.ytimg.com/vi/2Kos5VrtTtA/mqdefault.jpg "Wave Amplitude") ](https://www.youtube.com/watch?v=2Kos5VrtTtA)
 
@@ -455,7 +456,7 @@ Browser looks for relative "server" path `file:///Users/~/Desktop/md_evaluation_
 [![Text](path|url/p.jpg)](path|url/video)
 ```
 
-## Inline HTML <a id="InlineHTML"></a>[▴](#toc)
+## Inline HTML <a id="inline-html-"></a><sup>[▴](#contents)</sup>
 
 <dl>
   <dt>Definition list</dt>
@@ -486,7 +487,7 @@ alt="BOZEMAN VIDEO: Wave Amplitude" border="2" /></a>
 
 Note: `target="_blank"` does not work in MacDown.
 
-## Mathematics <a id="Mathematics"></a>[▴](#toc)
+## Mathematics <a id="mathematics-"></a><sup>[▴](#contents)</sup>
 
 > Baseline: use **`\\(`**, **`\\[`**, **`$`**, **`$$`**
 
@@ -542,8 +543,37 @@ $$
 
 *Note: markdown-preview-plus prefers light syntax highlights*
 
+## Mathematics (GitHub/GitLab) <a id="mathematics-githubgitlab-"></a><sup>[▴](#contents)</sup>
 
-## Entities <a id="Entities"></a>[▴](#toc)
+_GitHub and GitLab markdown does not directly support LaTeX formulas. A workaround is to use `https://render.githubusercontent.com/… ._
+
+> Note: Each plus `+` needs to be encoded as `$2B`to avoid how standard URL processing removes `+`.
+
+_HTML syntax is ok with spaces on GitHub and GitLab._
+
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a">
+
+``` html
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a">
+```
+
+_Markdown syntax without space encoding does not render correctly on GitHub and GitLab._
+
+![](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a)
+
+``` markdown
+![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a)
+```
+
+_Markdown syntax needs `%20` encoding for spaces to work correctly on GitHub and GitLab._
+
+![](https://render.githubusercontent.com/render/math?math=e^{i%20\pi}%20=%20-1%20%2B%20a)
+
+``` markdown
+![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\pi}%20=%20-1%20%2B%20a)
+```
+
+## Entities <a id="entities-"></a><sup>[▴](#contents)</sup>
 
 ▴ `&blacktriangle;` `&utrif;` _… link to top table of contents_  
 ⇗ `&neArr;`  North East Arrow _… link to offsite_  
@@ -575,7 +605,7 @@ see: com.apple.CharacterPicker.plist
 see also: com.apple.CharacterPaletteM.plist  
 see: `_PROCESS_/KeyBoard/!FavoriteChars.txt` 
 
-## Fonts <a id="Fonts"></a>[▴](#toc)
+## Fonts <a id="fonts-"></a><sup>[▴](#contents)</sup>
 
 'Andale Mono', 'DejaVu Sans Mono',
 
@@ -663,7 +693,7 @@ Given:<br>
 
 </div>
 
-## XCode <a id="Xcode"></a>[▴](#toc)
+## XCode <a id="xcode-"></a><sup>[▴](#contents)</sup>
 
 1. Added `Resources/` folder to the project. 
 2. Set Build Phase rule for each `*.md` file
@@ -673,7 +703,7 @@ Given:<br>
 
 _May be possible to add a Build Rules action script for `*.md` files_
 
-## Observations <a id="Observations"></a>[▴](#toc)
+## Observations <a id="observations-"></a><sup>[▴](#contents)</sup>
 
 * `markdown` (discount) and `hoedown` use mutually exclusive LaTeX syntax. `markdown` only uses a single backslash `\`.  `hoedown` uses both double backslash `\\` and dollar sign `$`
 
@@ -685,7 +715,7 @@ _May be possible to add a Build Rules action script for `*.md` files_
 
 * `markdown` (discount) fenced code does not work with html code.  Neither tilde nor backslash code fences are properly converted to `<pre><code>` tags. Angle brackets `<>` are not converted to html entities `&lt;&gt;`.
 
-## Resources <a id="Resources"></a>[▴](#toc)
+## Resources <a id="resources-"></a><sup>[▴](#contents)</sup>
 
 [W3: Character Entity Reference Chart ⇗](https://dev.w3.org/html5/html-author/charref)  
 [TeX Equation Editor ⇗](http://atomurl.net/math/)  

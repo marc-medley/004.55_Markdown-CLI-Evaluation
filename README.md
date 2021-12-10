@@ -1,18 +1,21 @@
 # [004.55 Markdown CLI Evaluation][t]
 [t]:https://github.com/marc-medley/004.55_Markdown-CLI-Evaluation
 
-<a id="toc" class="anchor"></a>
-[Objectives](#Objectives) • [Process](#Process) • [Observations](#Observations) • [Resources](#linkResources)
-
 _A comparative evalution of open source CLI Markdown processors: discount `markdown`, `hoedown`, `multimarkdown` and `pandoc`._
 
-## Objectives <a id="Objectives"></a>[▴](#toc)
+## Contents <a id="contents"></a>
+[Objectives](#objectives-) •
+[Process](#process-) •
+[Observations](#observations-) •
+[Resources](#resources-)
+
+## Objectives <a id="objectives-"></a><sup>[▴](#contents)</sup>
 
 1. Markdown Syntax. Find, to the extent possible, a common set of markdown syntax including certain extensions.
 2. CLI Settings. Find settings which produce the most similar markdown output.
 3. Extension Support. Evaluate extension support for footnotes, piped tables, fenced code, and LaTeX math.
 
-## Process <a id="Process"></a>[▴](#toc)
+## Process <a id="process-"></a><sup>[▴](#contents)</sup>
 
 1. Install ['multimarkdown'](https://formulae.brew.sh/formula/multimarkdown#default) (which installs as `markdown`), ['hoedown'](https://formulae.brew.sh/formula/hoedown#default), and ['pandoc'](https://formulae.brew.sh/formula/pandoc#default) as command line tools. 
 
@@ -24,7 +27,7 @@ _A comparative evalution of open source CLI Markdown processors: discount `markd
 
 >_Note: Discount and MultiMarkdown have install conflicting execution binaries named `markdown`. Thus, Discount `markdown` and MultiMarkdown `markdown` are mutually exclusive `brew` installs. However, Discount `markdown` can be manually installed somewhere not on `$PATH` and scripted with `/FULL/PATH/TO/markdown`._
     
-## Observations <a id="Observations"></a>[▴](#toc)
+## Observations <a id="observations-"></a><sup>[▴](#contents)</sup>
 
 The source document [`md_evaluation.md`](md_evaluation_files/md_evaluation.md) evolved and evolves to contain details on common syntax and notes on various markdown feature.
 
@@ -60,7 +63,7 @@ Note: Use of `\(`, `\[` single escape syntax _disallows escaping_ `(` and `[` fo
 * **Options.** Pandoc has the largest set of enable/disable options. [see PandocMarkdownOptions.md](pandoc/PandocMarkdownOptions.md)
 * `<pre><code>` Pandoc generates `<pre class="markdown"><code>` instead of `<pre><code class="language-markdown">`.
 
-## Resources <a id="linkResources" class="anchor"></a>[▴](#toc)
+## Resources <a id="resources-"></a><sup>[▴](#contents)</sup>
 
 * [DaringFireball: `markdown` ⇗](https://daringfireball.net/projects/markdown/) _Implementation: `Perl`_  v1.0.1 2004.12.17
 * [Discount `markdown` ⇗](http://www.pell.portland.or.us/~orc/Code/discount/), [github ⇗](https://github.com/Orc/discount), _Implementation: `C`_  
