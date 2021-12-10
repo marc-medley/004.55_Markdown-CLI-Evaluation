@@ -545,7 +545,7 @@ $$
 
 ## Mathematics (GitHub/GitLab) <a id="mathematics-githubgitlab-"></a><sup>[▴](#contents)</sup>
 
-_GitHub and GitLab markdown does not directly support LaTeX formulas. A workaround is to use `https://render.githubusercontent.com/… ._
+_GitHub and GitLab markdown does not directly support LaTeX formulas. A workaround is to use `https://render.githubusercontent.com/…` ._
 
 > Note: Each plus `+` needs to be encoded as `$2B`to avoid how standard URL processing removes `+`.
 
