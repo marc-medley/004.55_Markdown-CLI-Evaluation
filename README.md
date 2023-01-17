@@ -21,7 +21,7 @@ _A comparative evalution of open source CLI Markdown processors: discount `markd
 
     * Uninstall 'multimarkdown' (`brew uninstall multimarkdown`) and install ['discount'](https://formulae.brew.sh/formula/discount#default) (which installs as `markdown`) to run tests for `discount`.
 
-2. Review/Edit source markdown file ["md_evaluation.md"](test_sets/md_evaluation.md).
+2. Review/Edit source markdown file ["md_evaluation.md"](md_evaluation/md_evaluation.md).
 3. Review ["test.sh"](test_sets/test.sh). Edit options as needed. Run `./test.sh`.
 4. Compare output. The `a` and `b` versions allow comparison what output changed for some settings change for the same CLI tool. The `txt` and `html` allows for comparison of raw output and how the output renders in a browser.
 
@@ -29,7 +29,7 @@ _A comparative evalution of open source CLI Markdown processors: discount `markd
     
 ## Observations <a id="observations-"></a><sup>[▴](#contents)</sup>
 
-The source document [`md_evaluation.md`](md_evaluation_files/md_evaluation.md) evolved and evolves to contain details on common syntax and notes on various markdown feature.
+The source document [`md_evaluation.md`](md_evaluation/md_evaluation.md) evolved and evolves to contain details on common syntax and notes on various markdown feature.
 
 Some of the major findings are noted here below.
 

@@ -575,7 +575,7 @@ _Markdown syntax needs `%20` encoding for spaces to work correctly on GitHub and
 
 ## Entities <a id="entities-"></a><sup>[▴](#contents)</sup>
 
-▴ `&blacktriangle;` `&utrif;` _… link to top table of contents_  
+▴ `▴` `&utrif;` _… link to top table of contents_  
 ⇗ `&neArr;`  North East Arrow _… link to offsite_  
 
 ⇈ `&uuarr;` `&upuparrows;` `&#x21C8;` `&#8648;`  _… link top a topic level_  
