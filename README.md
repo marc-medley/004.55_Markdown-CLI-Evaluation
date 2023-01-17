@@ -3,6 +3,8 @@
 
 _A comparative evalution of open source CLI Markdown processors: discount `markdown`, `hoedown`, `multimarkdown` and `pandoc`._
 
+**View the markdown test page at [md_evaluation/md_evaluation.md](md_evaluation/md_evaluation.md).**
+
 ## Contents <a id="contents"></a>
 [Objectives](#objectives-) •
 [Process](#process-) •
