@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="174" height="22">
+<rect 
+  width="174" height="22"
+  rx="11" ry="11"
+  fill="#eeeeee"
+  stroke="#273135"
+  stroke-width="1" stroke-opacity="0.12"
+  stroke-linejoin="round"/>
+<text 
+  fill="#333026"
+  x="50%" y="53%"
+  dominant-baseline="middle" 
+  text-anchor="middle"
+  font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif"
+  font-size="12"
+  font-weight="600"
+  >from label_example.svg file</text>
+</svg>

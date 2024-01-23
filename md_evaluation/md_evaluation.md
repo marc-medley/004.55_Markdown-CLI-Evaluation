@@ -545,32 +545,43 @@ $$
 
 ## Mathematics (GitHub/GitLab) <a id="mathematics-githubgitlab-"></a><sup>[▴](#contents)</sup>
 
-_GitHub and GitLab markdown does not directly support LaTeX formulas. A workaround is to use `https://render.githubusercontent.com/…` ._
+**GitHub**
 
-> Note: Each plus `+` needs to be encoded as `$2B`to avoid how standard URL processing removes `+`.
+- [GitHub Docs: Writing mathematical expressions ⇗](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 
-_HTML syntax is ok with spaces on GitHub and GitLab._
-
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a">
-
-``` html
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a">
-```
-
-_Markdown syntax without space encoding does not render correctly on GitHub and GitLab._
-
-![](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a)
+This math is inline using `$` :  $\sqrt{3x-1}+(1+x)^2$
 
 ``` markdown
-![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1 %2B a)
+This math is inline using `$`: $\sqrt{3x-1}+(1+x)^2$
 ```
 
-_Markdown syntax needs `%20` encoding for spaces to work correctly on GitHub and GitLab._
+_The Cauchy-Schwarz Inequality_
 
-![](https://render.githubusercontent.com/render/math?math=e^{i%20\pi}%20=%20-1%20%2B%20a)
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
+GitHub expects a `$$` math block at the start of a new line.
 
 ``` markdown
-![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\pi}%20=%20-1%20%2B%20a)
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+```
+
+**GitLab**
+
+- [GitLab EE Docs: Math ⇗](https://docs.gitlab.com/ee/user/markdown.html#math)
+- [GitLab OSS Docs: Math ⇗](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/doc/user/markdown.md#math) 
+
+> _Note: Math written in LaTeX syntax is rendered with KaTeX. KaTeX only supports a subset of LaTeX._
+
+This math is inline using `$` : $a^2+b^2=c^2$.
+
+``` markdown
+This math is inline using `$` : $a^2+b^2=c^2$.
+```
+
+This math is on a separate line using inline `$$` : $$a^2+b^2=c^2$$
+
+``` markdown
+This math is on a separate line using inline `$$` : $$a^2+b^2=c^2$$
 ```
 
 ## Entities <a id="entities-"></a><sup>[▴](#contents)</sup>
@@ -692,6 +703,114 @@ Given:<br>
 # `div` heading    
 
 </div>
+
+## SVG <a id="svg-"></a><sup>[▴](#contents)</sup>
+
+`<rect>` `text`
+
+<svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+  <rect width="20" height="20" fill="#ebebeb" />
+  <rect x="30" width="20" height="20" rx="15" fill="#ebebeb" />
+</svg>
+
+**Pill Shape**
+
+Note: match `svg` width-height with `rect` width-height.
+
+``` svg
+<svg width="120" height="22">
+  <rect 
+    width="120" height="22"
+    rx="11" ry="11"
+    fill="#eeddcc"
+    stroke="#273135" stroke-opacity="0.12"
+    stroke-width="1" 
+    stroke-linejoin="round"/>
+  <text
+    fill="rgb(0, 0, 0)" 
+    x="50%" y="53%" 
+    dominant-baseline="middle" 
+    text-anchor="middle"
+    font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif"
+    font-size="12"
+    font-weight="600" 
+    >Example Text</text>
+</svg>
+```
+
+<svg width="120" height="22">
+  <rect 
+    width="120" height="22"
+    rx="11" ry="11"
+    fill="#eeddcc"
+    stroke="#273135" stroke-opacity="0.12"
+    stroke-width="1" 
+    stroke-linejoin="round"/>
+  <text
+    fill="rgb(0, 0, 0)" 
+    x="50%" y="53%" 
+    dominant-baseline="middle" 
+    text-anchor="middle"
+    font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif"
+    font-size="12"
+    font-weight="600" 
+    >Example Text</text>
+</svg>
+
+<svg width="100" height="22">
+  <rect
+    x="0" y="0" 
+    width="100" height="22"
+    rx="11" ry="11" 
+    fill="#128A0C"/>
+  <text
+    fill="#ffffff"
+    x="50%" y="53%" 
+    dominant-baseline="middle" 
+    text-anchor="middle"
+    font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif" 
+    font-size="12" 
+    font-weight="600" 
+    >two words</text>    
+</svg>
+
+<!-- match svg width-height with rect width-height -->
+<svg width="120" height="22">
+  <text
+    fill="#000000"
+    x="50%" y="52%" 
+    dominant-baseline="middle" 
+    text-anchor="middle"
+    font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif" 
+    font-size="12" 
+    font-weight="600" 
+    >some words</text>    
+</svg>
+
+- Generate GitHub-style SVG labels: [labl.es ⇗](https://labl.es/), [github/bhousel/svg-labels ⇗](https://github.com/bhousel/svg-labels)
+    - `rect`
+        - verify `svg` and `rect` height-weight match
+        - `stroke` is optional
+    - `text`
+       - replace `x=… y=…` with `x="50%" y="53%"`
+       - add `dominant-baseline="middle"` 
+       - replace `-apple-system,BlinkMacSystemFont` with `system-ui`
+
+![](https://labl.es/svg?text=celebrate&bgcolor=ffd479)
+![](https://labl.es/svg?text=amazing%20service&bgcolor=22aaac)
+
+``` markdown
+![](https://labl.es/svg?text=celebrate&bgcolor=ffd479)
+![](https://labl.es/svg?text=amazing%20service&bgcolor=22aaac)
+```
+
+**`md_evaluation_files/label_example_*.svg:`** 
+
+- `label_example_generated.svg` : <span style="vertical-align:middle">![](md_evaluation_files/label_example_generated.svg)</span>
+- `label_example_modified.svg` : <img src="md_evaluation_files/label_example_modified.svg" style="vertical-align:middle"/>
+- style="display:block;margin-left:auto;margin-right:auto;":
+
+<img src="md_evaluation_files/label_example_modified.svg" style="display:block;margin-left:auto;margin-right:auto;"/>
 
 ## XCode <a id="xcode-"></a><sup>[▴](#contents)</sup>
 
