@@ -12,17 +12,16 @@ Or maybe go with [1↗︎][1] [2↗︎][1] [3↗︎][1].
 
 Or the most compact form which would be  [`1`][1] [`2`][1] [`3`][1].
 
-Or a readable form which would be  [`1↗︎`][1] [`2↗︎`][1] [`3↗︎`][1].
+Or a readable form which would be  [`1↗︎`][1] [`2↗︎`][1] [`3↗︎`][1].  <-<-<- use this one
 
 - `1` [example.com][1]
-- `1` [example.com ↗︎][1]
+- `1` [example.com ↗︎][1] <-<-<- use this one
 - `1` [https://example.com ↗︎][1]
 - `1` [https://example.com][1]
 - `1` [`https://example.com`][1]
 - `1` [https://example.com ↗︎](https://example.com) … direct link
 
-[1]: https://example.com
-
+[1]:https://example.com
 
 a
 
