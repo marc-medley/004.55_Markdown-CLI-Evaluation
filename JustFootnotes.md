@@ -1,3 +1,18 @@
+<!--CHECK_1_HYPHEN-->
+-
+
+1 Hyphen
+
+<!--CHECK_2_HYPHEN-->
+--
+
+2 Hyphen
+
+<!--CHECK_3_HYPHEN-->
+---
+
+3 Hyphen
+
 Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
 Here section one[^1-4] and section two[^2-4] have footnotes.
