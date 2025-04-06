@@ -5,22 +5,22 @@ _See: [004.55_Markdown-CLI-Evaluation](https://github.com/marc-medley/004.55_Mar
 
 ## Contents <a id="contents"></a>
 [Heading Anchor](#heading-anchor-):
-[id after](#id-after-)• 
-[Code](#code-)• 
-[Monospace](#monospace-)• 
-[Lists](#lists-)• 
-[Tables _(extension)_](#tables-extension-)• 
-[Links](#links-)• 
-[Images](#images-)• 
-[Video Link](#video-link-)• 
-[Inline HTML](#inline-html-)• 
-[Mathematics](#mathematics-)• 
-[Mathematics (GitHub/GitLab)](#mathematics-githubgitlab-)• 
-[Entities](#entities-)• 
-[Fonts](#fonts-)• 
+[id after](#id-after-) • 
+[Code](#code-) • 
+[Monospace](#monospace-) • 
+[Lists](#lists-) • 
+[Tables _(extension)_](#tables-extension-) • 
+[Links](#links-) • 
+[Images](#images-) • 
+[Video Link](#video-link-) • 
+[Inline HTML](#inline-html-) • 
+[Mathematics](#mathematics-) • 
+[Mathematics (GitHub/GitLab)](#mathematics-githubgitlab-) • 
+[Entities](#entities-) • 
+[Fonts](#fonts-) • 
 [SVG](#svg-) (labels) •
-[Xcode](#xcode-)• 
-[Observations](#observations-)•  
+[Xcode](#xcode-) • 
+[Observations](#observations-) •  
 [Resources](#resources-)
 
 Note: Pandoc `markdown_strict` appears to only recognized one title line at the top of file.
