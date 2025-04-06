@@ -1,17 +1,12 @@
-<!--CHECK_1_HYPHEN-->
--
+---
+<!--CHECK_3_HYPHEN-->
 
-1 Hyphen
-
-<!--CHECK_2_HYPHEN-->
---
-
-2 Hyphen
+3 Hyphen preceding
 
 <!--CHECK_3_HYPHEN-->
 ---
 
-3 Hyphen
+3 Hyphen following
 
 Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
